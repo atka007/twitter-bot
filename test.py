@@ -4,3 +4,5 @@ my_bot = TwitterBot()
 
 my_bot.sync_follows()
 my_bot.send_tweet("Hello world!")
+
+my_bot.auto_follow("cars")
