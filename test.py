@@ -23,3 +23,6 @@ my_bot.auto_follow_followers_of_user("verge", count=100)
 my_bot.auto_unfollow_nonfollowers()
 my_bot.favorite_following_tweets()
 #my_bot.auto_unfollow_all_followers()
+
+
+#30261067,18286505,18742444,893484744725467137,972651,18927441,14763734,816653,10876852,1344951,275686563,14372486,2890961
