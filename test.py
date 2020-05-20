@@ -5,10 +5,8 @@ my_bot = TwitterBot()
 #my_bot.send_tweet("Hello world!")
 
 #Sync follows every day
-while True:
-  my_bot.sync_follows()
-  wait(86400)
 
+ my_bot.sync_follows()
 
 #my_bot.auto_follow("cars")
 
