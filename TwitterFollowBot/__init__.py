@@ -456,6 +456,18 @@ class TwitterBot:
 
         return self.TWITTER_CONNECTION.statuses.update(status=message)
     
+    
+    def favorite_following_tweets(self, message):
+        """
+            Favorites a random tweet of followed accounts
+        """
+        num_tweets = random.randint(0, 20)
+        user_tweets = t.statuses.user_timeline(user_id=user_id)
+        for tweet_index in range(num_tweets):
+            result = t.favorites.create(_id=user_tweets[tweet_index]["id"])
+            print("Favorited their tweet: %s" % (result["text"].encode("utf-8")))
+    
+    
     def auto_add_to_list(self, phrase, list_slug, count=100, result_type="recent"):
         """
             Add users to list slug that are tweeting phrase.
