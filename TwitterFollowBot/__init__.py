@@ -362,7 +362,8 @@ class TwitterBot:
                     self.wait_on_action()
 
                     self.TWITTER_CONNECTION.friendships.create(user_id=user_id, follow=False)
-                    print("Followed %s" % user_id, file=sys.stdout)
+                    print("Followed: %s" % user_id, file=sys.stdout)
+                    print("Follower of: %s" % user_twitter_handle, file=sys.stdout)
 
             except TwitterHTTPError as api_error:
                 # quit on rate limit errors
