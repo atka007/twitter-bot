@@ -15,5 +15,6 @@ my_bot.auto_follow_followers_of_user("verge", count=100)
 
 #my_bot.auto_rt("phrase", count=1000)
 
-#my_bot.auto_unfollow_nonfollowers()
+my_bot.auto_unfollow_nonfollowers()
+my_bot.favorite_following_tweets()
 #my_bot.auto_unfollow_all_followers()
