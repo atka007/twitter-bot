@@ -18,7 +18,7 @@ print("Running Bot!")
 #my_bot.send_tweet("Hello world!")
 
 #Sync follows every day
-#my_bot.sync_follows()
+my_bot.sync_follows()
 
 #my_bot.auto_follow("CNET")
 
@@ -33,19 +33,18 @@ for x in range(repeat_actions):
   my_bot.auto_follow_followers_of_user("CNET", count=act)  
   
   #Like something
-  my_bot.auto_fav("luxury", count=2)
+  my_bot.auto_fav("luxury", count=1)
   
   my_bot.auto_follow_followers_of_user("wired", count=act) 
   
   #Retweet Something
-  my_bot.auto_rt("warzone", count=1)
+  my_bot.auto_rt("cool", count=1)
   
   my_bot.auto_follow_followers_of_user("verge", count=act)
-  
-  
-  
+      
   #Unfolow people
-  #my_bot.auto_unfollow_all_followers()
+  my_bot.auto_unfollow_all_followers(5)
+  
   
   
   
