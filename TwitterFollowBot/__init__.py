@@ -433,8 +433,7 @@ class TwitterBot:
                 print("Unfollow Loop: " + str(x))
                 self.wait_on_action()
 
-                try:
-                    #print("Trying to unfollow!")
+                try:                    
                     self.TWITTER_CONNECTION.friendships.destroy(user_id=user_id)
                     print("Unfollowed %d" % (user_id), file=sys.stdout)
                 except:
