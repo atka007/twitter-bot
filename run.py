@@ -4,7 +4,7 @@ import time
 import math
 
 my_bot = TwitterBot()
-wait_time = 5
+wait_time = 3
 repeat_actions = 30
 likes = 1
 retweets = 1
@@ -46,7 +46,7 @@ for x in range(repeat_actions):
   my_bot.auto_unfollow_all_followers(unfollow_num)
   
   #Random Wait Up to 3 min
-  time.sleep(random() * 3 * 60)
+  time.sleep(random() * wait_time * 60)
     
 
 #my_bot.auto_rt("phrase", count=1000)
