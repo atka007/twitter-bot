@@ -414,6 +414,7 @@ class TwitterBot:
             Unfollows everyone that you are following(except those who you have specified not to)
         """
         following = self.get_follows_list()
+        print(count)
 
         for user_id in following:
             if user_id not in self.BOT_CONFIG["USERS_KEEP_FOLLOWING"]:
