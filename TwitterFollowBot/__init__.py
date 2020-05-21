@@ -378,7 +378,7 @@ class TwitterBot:
                 if "already requested to follow" not in str(api_error).lower():
                     print("Error: %s" % (str(api_error)), file=sys.stderr)
 
-    def auto_unfollow_nonfollowers(self,count=None):
+    def auto_unfollow_nonfollowers(self,count):
         """
             Unfollows everyone who hasn't followed you back.
         """
@@ -409,7 +409,7 @@ class TwitterBot:
                 self.TWITTER_CONNECTION.friendships.destroy(user_id=user_id)
                 print("Unfollowed %d" % (user_id), file=sys.stdout)
 
-    def auto_unfollow_all_followers(self,count=None):
+    def auto_unfollow_all_followers(self,count):
         """
             Unfollows everyone that you are following(except those who you have specified not to)
         """
