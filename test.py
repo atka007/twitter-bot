@@ -20,19 +20,21 @@ print("Running Bot!")
 
 #my_bot.auto_follow("CNET")
 
-for x in range(6):
+for x in range(3):
   print("Loop: " + str(x))
   time.sleep(wait_time)
   
   my_bot.auto_follow_followers_of_user("CNET", count=actions)
   
-  my_bot.auto_fav("luxury", count=10)
+  my_bot.auto_fav("luxury", count=2)
   
   my_bot.auto_follow_followers_of_user("wired", count=actions)
   
   my_bot.auto_follow_followers_of_user("verge", count=actions)
   
   #my_bot.auto_unfollow_all_followers()
+  
+  my_bot.auto_rt("warzone", count=1)
   
 
 #my_bot.auto_rt("phrase", count=1000)
