@@ -10,8 +10,8 @@ likes = 1
 retweets = 1
 accounts = 3
 max_actions = 3
-reTweetSource = ["11hr11min","mashable","wired","cnet"]
-likeSource = ["luxury","mashable","wired","cnet"]
+reTweetSourceList = ["11hr11min","mashable","wired","cnet"]
+likeSourceList = ["luxury","mashable","wired","cnet"]
 
 daily_actions = repeat_actions * ((accounts * max_actions) + likes + retweets)
 print("Daily Actions: " + str(daily_actions))
@@ -32,8 +32,11 @@ for x in range(repeat_actions):
   #my_bot.auto_follow_followers_of_user("CNET", count=rnd)  
   
   #Like something
-  rndLike=random.randint(1,len(likeSource))
-  my_bot.auto_fav(likeSource[rndLike], count=likes)
+  rndLike=random.randint(0,len(likeSourceList)-1)
+  print("rndLike: " + str(rndLike))
+  likeSource=likeSourceList[rndLike]
+  print("likeSource: " + str(likeSource))
+  my_bot.auto_fav(likeSource, count=likes)
   
   rnd=random.randint(1,max_actions) 
   #my_bot.auto_follow_followers_of_user("wired", count=rnd) 
