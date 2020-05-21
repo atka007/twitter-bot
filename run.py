@@ -5,7 +5,7 @@ import math
 
 my_bot = TwitterBot()
 wait_time = 3
-repeat_actions = 3
+repeat_actions = 300
 likes = 1
 retweets = 1
 accounts = 3
@@ -22,45 +22,49 @@ print("Running Bot!")
 #Sync follows every day
 my_bot.sync_follows()
 
-#my_bot.auto_follow("CNET")
-
 for x in range(repeat_actions):
   print("Loop Number: " + str(x))
 
   #Follow people
   rnd=random.randint(1,max_actions) 
-  #my_bot.auto_follow_followers_of_user("CNET", count=rnd)  
+  my_bot.auto_follow_followers_of_user("CNET", count=rnd)  
   
   #Like something
-  rndLike=random.randint(0,len(likeSourceList)-1)
-  print("rndLike: " + str(rndLike))
-  likeSource=likeSourceList[rndLike]
-  print("likeSource: " + str(likeSource))
-  my_bot.auto_fav(likeSource, count=likes)
+  try:
+    rndLike=random.randint(0,len(likeSourceList)-1)
+    print("rndLike: " + str(rndLike))
+    likeSource=likeSourceList[rndLike]
+    print("likeSource: " + str(likeSource))
+    my_bot.auto_fav(likeSource, count=likes)
+  except:
+    print("This didn't work for some reason!")  
   
   rnd=random.randint(1,max_actions) 
-  #my_bot.auto_follow_followers_of_user("wired", count=rnd) 
+  my_bot.auto_follow_followers_of_user("wired", count=rnd) 
   
   #Retweet Something
-  rndTweet=random.randint(0,len(reTweetSourceList)-1)
-  print("rndTweet: " + str(rndTweet))
-  reTweetSource=reTweetSourceList[rndTweet]
-  print("reTweetSource: " + str(reTweetSource))   
-  my_bot.auto_rt(reTweetSource, count=retweets)
+  try:
+    rndTweet=random.randint(0,len(reTweetSourceList)-1)
+    print("rndTweet: " + str(rndTweet))
+    reTweetSource=reTweetSourceList[rndTweet]
+    print("reTweetSource: " + str(reTweetSource))   
+    my_bot.auto_rt(reTweetSource, count=retweets)
+  except:
+    print("This didn't work for some reason!")  
   
   rnd=random.randint(1,max_actions) 
-  #my_bot.auto_follow_followers_of_user("verge", count=rnd)
+  my_bot.auto_follow_followers_of_user("verge", count=rnd)
       
   #Unfolow people
   unfollow_num = accounts * max_actions
-  #my_bot.auto_unfollow_all_followers(unfollow_num)
+  my_bot.auto_unfollow_all_followers(unfollow_num)
   
   #Random Wait Up to 3 min
-  #time.sleep(random() * wait_time * 60)
+  time.sleep(random() * wait_time * 60)
     
 
     
-    
+#my_bot.auto_follow("CNET")    
 #my_bot.auto_rt("phrase", count=1000)
 #my_bot.auto_unfollow_nonfollowers()
 #my_bot.favorite_following_tweets()
