@@ -25,8 +25,9 @@ for x in range(3):
   print("Loop: " + str(x))
   time.sleep(wait_time)
   print("Actions: " + str(actions))
+  act = int(ceil(actions))
 
-  my_bot.auto_follow_followers_of_user("CNET", count=int(ceil(actions)))
+  my_bot.auto_follow_followers_of_user("CNET", count=act)
   
   my_bot.auto_fav("luxury", count=2)
   
