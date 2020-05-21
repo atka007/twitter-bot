@@ -417,10 +417,15 @@ class TwitterBot:
         
         following = self.get_follows_list()   
         numFollowing = len(following)
+        print("following: " + str(following))
+        print("numFollowingnumFollowing: " + str(numFollowing))
 
         #for user_id in following:
         for x in range(3):
-            user_id = following[random.randint(1,numFollowing)]
+            rnd=randint(1,numFollowing)
+            print("rnd: " + str(rnd))
+            user_id = following[rnd]
+
             print("user_id: " + str(user_id))
             
             if user_id not in self.BOT_CONFIG["USERS_KEEP_FOLLOWING"]:
