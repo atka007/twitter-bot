@@ -1,5 +1,6 @@
 from TwitterFollowBot import TwitterBot
 import time
+import math
 import random
 
 my_bot = TwitterBot()
