@@ -6,9 +6,13 @@ import math
 my_bot = TwitterBot()
 wait_time = 5
 repeat_actions = 30
-
+likes = 1
+retweets = 1
 accounts = 3
 max_actions = 3
+
+daily_actions = repeat_actions * ((accounts * max_actions) + likes + retweets)
+print("Daily Actions: " + str(daily_actions))
 
 print("Running Bot!")
 #my_bot.send_tweet("Hello world!")
@@ -31,13 +35,13 @@ for x in range(repeat_actions):
   my_bot.auto_follow_followers_of_user("CNET", count=rnd)  
   
   #Like something
-  my_bot.auto_fav("luxury", count=1)
+  my_bot.auto_fav("luxury", count=likes)
   
   rnd=random.randint(1,max_actions) 
   my_bot.auto_follow_followers_of_user("wired", count=rnd) 
   
   #Retweet Something
-  my_bot.auto_rt("cool", count=1)
+  my_bot.auto_rt("cool", count=retweets)
   
   rnd=random.randint(1,max_actions) 
   my_bot.auto_follow_followers_of_user("verge", count=rnd)
@@ -46,9 +50,7 @@ for x in range(repeat_actions):
   unfollow_num = accounts * max_actions
   my_bot.auto_unfollow_all_followers(unfollow_num)
   
-  
-  
-  
+    
 
 #my_bot.auto_rt("phrase", count=1000)
 #my_bot.auto_unfollow_nonfollowers()
