@@ -413,26 +413,17 @@ class TwitterBot:
         """
             Unfollows everyone that you are following(except those who you have specified not to)
         """
-        print("Count: " + str(count))
+        #print("Count: " + str(count))
         
         following = self.get_follows_list()          
-        followingList = list(following) 
-        
+        followingList = list(following)         
         numFollowing = len(followingList)
-        #print("following: " + str(following))
-        #print("numFollowing: " + str(numFollowing))
-
-        #for user_id in following:
-        for x in range(3):
-            rnd=random.randint(1,numFollowing) 
-                      
-            print("rnd: " + str(rnd))
-            user_id = followingList[rnd]
-
-            print("user_id: " + str(user_id))
+        
+        for x in range(count):
+            rnd=random.randint(1,numFollowing)         
+            user_id = followingList[rnd]        
             
             if user_id not in self.BOT_CONFIG["USERS_KEEP_FOLLOWING"]:
-
                 print("Unfollow Loop: " + str(x))
                 self.wait_on_action()
 
