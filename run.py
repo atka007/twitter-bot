@@ -42,8 +42,11 @@ for x in range(repeat_actions):
   #my_bot.auto_follow_followers_of_user("wired", count=rnd) 
   
   #Retweet Something
-  rndTweet=random.randint(1,len(reTweetSource))  
-  my_bot.auto_rt(reTweetSource[rndTweet], count=retweets)
+  rndTweet=random.randint(0,len(reTweetSourceList)-1)
+  print("rndTweet: " + str(rndTweet))
+  reTweetSource=reTweetSourceList[rndTweet]
+  print("reTweetSource: " + str(reTweetSource))   
+  my_bot.auto_rt(reTweetSource, count=retweets)
   
   rnd=random.randint(1,max_actions) 
   #my_bot.auto_follow_followers_of_user("verge", count=rnd)
