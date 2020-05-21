@@ -414,15 +414,17 @@ class TwitterBot:
             Unfollows everyone that you are following(except those who you have specified not to)
         """
         following = self.get_follows_list()
-        print(count)
-
+        print("Count: " + str(count))
+   
         for user_id in following:
-            if user_id not in self.BOT_CONFIG["USERS_KEEP_FOLLOWING"]:
+            for x in range(3):
+                if user_id not in self.BOT_CONFIG["USERS_KEEP_FOLLOWING"]:
 
-                self.wait_on_action()
+                    print("Unfollow Loop: " + str(x))
+                    self.wait_on_action()
 
-                self.TWITTER_CONNECTION.friendships.destroy(user_id=user_id)
-                print("Unfollowed %d" % (user_id), file=sys.stdout)
+                    self.TWITTER_CONNECTION.friendships.destroy(user_id=user_id)
+                    print("Unfollowed %d" % (user_id), file=sys.stdout)
 
     def auto_mute_following(self):
         """
