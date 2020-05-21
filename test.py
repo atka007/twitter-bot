@@ -3,6 +3,7 @@ import time
 import random
 
 my_bot = TwitterBot()
+wait_time = 60
 print("Running Bot!")
 #my_bot.send_tweet("Hello world!")
 
@@ -15,6 +16,7 @@ print("Running Bot!")
 
 for x in range(6):
   print(x)
+  time.sleep(wait_time)
   #my_bot.auto_follow_followers_of_user("CNET", count=100)
   #my_bot.auto_follow_followers_of_user("wired", count=100)
   #my_bot.auto_follow_followers_of_user("verge", count=100)
