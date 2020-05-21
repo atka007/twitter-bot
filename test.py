@@ -5,7 +5,7 @@ import random
 my_bot = TwitterBot()
 wait_time = 5
 accounts = 3
-daily_followings = 10
+daily_followings = 6
 actions = daily_followings / accounts
 
 
@@ -24,13 +24,13 @@ for x in range(6):
   print("Loop: " + str(x))
   time.sleep(wait_time)
   
-  #my_bot.auto_follow_followers_of_user("CNET", count=actions)
+  my_bot.auto_follow_followers_of_user("CNET", count=actions)
   
-  #my_bot.auto_fav("luxury", count=10)
+  my_bot.auto_fav("luxury", count=10)
   
-  #my_bot.auto_follow_followers_of_user("wired", count=actions)
+  my_bot.auto_follow_followers_of_user("wired", count=actions)
   
-  #my_bot.auto_follow_followers_of_user("verge", count=actions)
+  my_bot.auto_follow_followers_of_user("verge", count=actions)
   
   #my_bot.auto_unfollow_all_followers()
   
