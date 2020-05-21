@@ -25,17 +25,17 @@ for x in range(3):
   time.sleep(wait_time)
   print("Actions: " + str(actions))
 
-  my_bot.auto_follow_followers_of_user("CNET", count=int(ceil(actions)))
+  #my_bot.auto_follow_followers_of_user("CNET", count=int(ceil(actions)))
   
-  my_bot.auto_fav("luxury", count=2)
+  #my_bot.auto_fav("luxury", count=2)
   
-  my_bot.auto_follow_followers_of_user("wired", count=int(ceil(actions)))
+  #my_bot.auto_follow_followers_of_user("wired", count=int(ceil(actions)))
   
-  my_bot.auto_follow_followers_of_user("verge", count=int(ceil(actions)))
+  #my_bot.auto_follow_followers_of_user("verge", count=int(ceil(actions)))
   
   #my_bot.auto_unfollow_all_followers()
   
-  my_bot.auto_rt("warzone", count=1)
+  #my_bot.auto_rt("warzone", count=1)
   
 
 #my_bot.auto_rt("phrase", count=1000)
