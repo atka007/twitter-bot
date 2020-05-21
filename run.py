@@ -19,6 +19,7 @@ print("Daily Actions: " + str(daily_actions))
 print("Running Bot!")
 #my_bot.send_tweet("Hello world!")
 
+
 #Sync follows every day
 my_bot.sync_follows()
 
@@ -62,7 +63,6 @@ for x in range(repeat_actions):
   #Random Wait Up to 3 min
   time.sleep(random() * wait_time * 60)
     
-
     
 #my_bot.auto_follow("CNET")    
 #my_bot.auto_rt("phrase", count=1000)
