@@ -36,7 +36,7 @@ for x in range(repeat_actions):
   my_bot.auto_follow_followers_of_user("wired", count=rnd) 
   
   #Retweet Something
-  my_bot.auto_rt("cool", count=retweets)
+  my_bot.auto_rt("mashable", count=retweets)
   
   rnd=random.randint(1,max_actions) 
   my_bot.auto_follow_followers_of_user("verge", count=rnd)
