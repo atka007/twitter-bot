@@ -5,9 +5,12 @@ import random
 
 my_bot = TwitterBot()
 wait_time = 5
+repeat_actions = 3
+
 accounts = 3
 daily_followings = 7
 actions = daily_followings / accounts
+
 
 
 print("Running Bot!")
@@ -17,28 +20,34 @@ print("Running Bot!")
 #Sync follows every day
 #my_bot.sync_follows()
 
-#my_bot.auto_follow("cars")
-
 #my_bot.auto_follow("CNET")
 
-for x in range(3):
+for x in range(repeat_actions):
   print("Loop: " + str(x))
   time.sleep(wait_time)
   print("Actions: " + str(actions))
   act = int(actions)
   print("Act: " + str(act))
 
-  my_bot.auto_follow_followers_of_user("CNET", count=act)
+  #Follow people
+  my_bot.auto_follow_followers_of_user("CNET", count=act)  
   
+  #Like something
   my_bot.auto_fav("luxury", count=2)
   
-  #my_bot.auto_follow_followers_of_user("wired", count=int(ceil(actions)))
+  my_bot.auto_follow_followers_of_user("wired", count=act) 
   
-  #my_bot.auto_follow_followers_of_user("verge", count=int(ceil(actions)))
+  #Retweet Something
+  my_bot.auto_rt("warzone", count=1)
   
+  my_bot.auto_follow_followers_of_user("verge", count=act)
+  
+  
+  
+  #Unfolow people
   #my_bot.auto_unfollow_all_followers()
   
-  #my_bot.auto_rt("warzone", count=1)
+  
   
 
 #my_bot.auto_rt("phrase", count=1000)
