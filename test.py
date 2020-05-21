@@ -3,7 +3,7 @@ import time
 import random
 
 my_bot = TwitterBot()
-
+print("Running Bot!")
 #my_bot.send_tweet("Hello world!")
 
 #Sync follows every day
