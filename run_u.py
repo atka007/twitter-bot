@@ -5,6 +5,8 @@ import random
 
 my_bot = TwitterBot()
 
+my_bot.sync_follows()
+
 print("Running Unfollow Bot!")
 
 #Unfolow people
