@@ -23,12 +23,7 @@ my_bot.sync_follows()
 #my_bot.auto_follow("CNET")
 
 for x in range(repeat_actions):
-  print("Loop: " + str(x))
-
-  #Random Wait Up to 5 min
-  #time.sleep(random() * 5 * 60)
-
-  #print("Act: " + str(act))
+  print("Loop Number: " + str(x))
 
   #Follow people
   rnd=random.randint(1,max_actions) 
@@ -50,6 +45,8 @@ for x in range(repeat_actions):
   unfollow_num = accounts * max_actions
   my_bot.auto_unfollow_all_followers(unfollow_num)
   
+  #Random Wait Up to 3 min
+  time.sleep(random() * 3 * 60)
     
 
 #my_bot.auto_rt("phrase", count=1000)
