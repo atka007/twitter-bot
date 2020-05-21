@@ -5,7 +5,7 @@ import math
 
 my_bot = TwitterBot()
 wait_time = 3
-repeat_actions = 30
+repeat_actions = 300
 likes = 1
 retweets = 1
 accounts = 3
