@@ -415,8 +415,10 @@ class TwitterBot:
         """
         print("Count: " + str(count))
         
-        following = self.get_follows_list()   
-        numFollowing = len(following)
+        following = self.get_follows_list()          
+        followingList = list(following) 
+        
+        numFollowing = len(followingList)
         #print("following: " + str(following))
         #print("numFollowing: " + str(numFollowing))
 
@@ -425,7 +427,7 @@ class TwitterBot:
             rnd=random.randint(1,numFollowing) 
                       
             print("rnd: " + str(rnd))
-            user_id = following[rnd]
+            user_id = followingList[rnd]
 
             print("user_id: " + str(user_id))
             
