@@ -5,11 +5,13 @@ import math
 
 my_bot = TwitterBot()
 wait_time = 3
-repeat_actions = 300
+repeat_actions = 3
 likes = 1
 retweets = 1
 accounts = 3
 max_actions = 3
+reTweetSource = ["11hr11min","mashable","wired","cnet"]
+likeSource = ["luxury","mashable","wired","cnet"]
 
 daily_actions = repeat_actions * ((accounts * max_actions) + likes + retweets)
 print("Daily Actions: " + str(daily_actions))
@@ -27,28 +29,32 @@ for x in range(repeat_actions):
 
   #Follow people
   rnd=random.randint(1,max_actions) 
-  my_bot.auto_follow_followers_of_user("CNET", count=rnd)  
+  #my_bot.auto_follow_followers_of_user("CNET", count=rnd)  
   
   #Like something
-  my_bot.auto_fav("luxury", count=likes)
+  rndLike=random.randint(1,len(likeSource))
+  my_bot.auto_fav(likeSource[rndLike], count=likes)
   
   rnd=random.randint(1,max_actions) 
-  my_bot.auto_follow_followers_of_user("wired", count=rnd) 
+  #my_bot.auto_follow_followers_of_user("wired", count=rnd) 
   
   #Retweet Something
-  my_bot.auto_rt("mashable", count=retweets)
+  rndTweet=random.randint(1,len(reTweetSource))  
+  my_bot.auto_rt(reTweetSource[rndTweet], count=retweets)
   
   rnd=random.randint(1,max_actions) 
-  my_bot.auto_follow_followers_of_user("verge", count=rnd)
+  #my_bot.auto_follow_followers_of_user("verge", count=rnd)
       
   #Unfolow people
   unfollow_num = accounts * max_actions
-  my_bot.auto_unfollow_all_followers(unfollow_num)
+  #my_bot.auto_unfollow_all_followers(unfollow_num)
   
   #Random Wait Up to 3 min
-  time.sleep(random() * wait_time * 60)
+  #time.sleep(random() * wait_time * 60)
     
 
+    
+    
 #my_bot.auto_rt("phrase", count=1000)
 #my_bot.auto_unfollow_nonfollowers()
 #my_bot.favorite_following_tweets()
