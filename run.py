@@ -42,7 +42,7 @@ for x in range(repeat_actions):
   my_bot.auto_follow_followers_of_user("verge", count=2)
       
   #Unfolow people
-  my_bot.auto_unfollow_all_followers(2)
+  #my_bot.auto_unfollow_all_followers(2)
   
   
   
