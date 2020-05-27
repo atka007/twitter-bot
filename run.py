@@ -10,7 +10,9 @@ likes = 1
 retweets = 1
 accounts = 3
 max_actions = 3
-reTweetSourceList = ["11hr11min","mashable","wired","cnet"]
+reTweetSourceList = ["11hr11min","mashable","wired","cnet","EducationalPic","EmojiMashupPlus","Lifehacker","engadget",
+                     "verge","thenextweb","digitaltrends","roadshow","themotleyfool","hypebeast","DIYDrones","BritishGQ",
+                     "LouboutinWorld","univercurious","kicksonfire"]
 likeSourceList = ["luxury","mashable","wired","cnet"]
 
 daily_actions = repeat_actions * ((accounts * max_actions) + likes + retweets)
