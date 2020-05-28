@@ -81,9 +81,11 @@ for x in range(repeat_actions):
   elif option == 1:
     print("do_unfollow") 
   elif option == 2:
-    print("do_retweet") 
+    print("do_retweet")
+    do_retweet()
   elif option == 3:
     print("do_like") 
+    do_like()
   else:
     print("do_message") 
  
