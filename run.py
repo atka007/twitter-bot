@@ -26,7 +26,7 @@ max_actions = 3
 #Controls
 cntrl_follow = 0
 cntrl_unfollow = 0
-cntrl_retweet = 1
+cntrl_retweet = 0
 cntrl_like = 1
 cntrl_message = 1
 
@@ -75,7 +75,7 @@ def do_message(self):
     print("Message: " + str(message)) 
     
     #Send DM
-    #my_bot.send_dm(followSource, greeting, message, count=rnd):
+    my_bot.send_dm(followSource, greeting, message, count=rnd):
     
 #Unfolow
 def do_unfollow(self):
