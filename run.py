@@ -12,7 +12,7 @@ reTweetSourceList = ["11hr11min","mashable","wired","cnet","EducationalPic","Emo
 likeSourceList = ["luxury","mashable","wired","cnet"]
 
 #Timers
-wait_time = 0.25  #minutes
+wait_time = 1
 repeat_actions = 300
 likes = 1
 retweets = 1
@@ -87,7 +87,7 @@ for x in range(repeat_actions):
     print("do_message") 
  
   #Random Wait
-  time.sleep(random() * wait_time * 60)
+  time.sleep(random() * wait_time * 6)
     
     
 #my_bot.auto_follow("CNET")    
@@ -95,5 +95,4 @@ for x in range(repeat_actions):
 #my_bot.auto_unfollow_nonfollowers()
 #my_bot.favorite_following_tweets()
 
-#30261067,18286505,18742444,893484744725467137,972651,18927441,14763734,816653,10876852,1344951,275686563,14372486,2890961
 print("BOT Finished Process!")
