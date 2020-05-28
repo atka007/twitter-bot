@@ -87,7 +87,8 @@ for x in range(repeat_actions):
     print("do_message") 
  
   #Random Wait
-  time.sleep(random() * wait_time * 6)
+  wait_for = 6 * random.randint(0, wait_time)
+  time.sleep(wait_for)
     
     
 #my_bot.auto_follow("CNET")    
