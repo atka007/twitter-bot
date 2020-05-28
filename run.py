@@ -12,7 +12,7 @@ reTweetSourceList = ["11hr11min","mashable","wired","cnet","EducationalPic","Emo
 likeSourceList = ["luxury","mashable","wired","cnet"]
 
 #Timers
-wait_time = 3
+wait_time = 0.25  #minutes
 repeat_actions = 300
 likes = 1
 retweets = 1
@@ -34,29 +34,20 @@ print("Running Bot!")
 #Sync follows every day
 my_bot.sync_follows()
 
-for x in range(repeat_actions):
-  print("Loop Number: " + str(x))
-
-  #Follow people
+#Follow
+def do_follow(self):
   if cntrl_follow == 1:
     rnd=random.randint(1,max_actions) 
     my_bot.auto_follow_followers_of_user("CNET", count=rnd)  
-  
-  #Like something
-  if cntrl_like == 1:
-    try:
-      rndLike=random.randint(0,len(likeSourceList)-1)
-      print("rndLike: " + str(rndLike))
-      likeSource=likeSourceList[rndLike]
-      print("likeSource: " + str(likeSource))
-      my_bot.auto_fav(likeSource, count=likes)
-    except:
-      print("This didn't work for some reason!")  
-  
-  rnd=random.randint(1,max_actions) 
-  my_bot.auto_follow_followers_of_user("wired", count=rnd) 
-  
-  #Retweet Something
+    
+#Unfolow
+def do_unfollow(self):
+  if cntrl_unfollow == 1:
+    unfollow_num = accounts * max_actions
+    my_bot.auto_unfollow_all_followers(unfollow_num)
+
+#Retweet
+def do_retweet(self):
   if cntrl_retweet == 1:
     try:
       rndTweet=random.randint(0,len(reTweetSourceList)-1)
@@ -66,16 +57,36 @@ for x in range(repeat_actions):
       my_bot.auto_rt(reTweetSource, count=retweets)
     except:
       print("This didn't work for some reason!")  
-  
-  rnd=random.randint(1,max_actions) 
-  my_bot.auto_follow_followers_of_user("verge", count=rnd)
-      
-  #Unfolow people
-  if cntrl_unfollow == 1:
-    unfollow_num = accounts * max_actions
-    my_bot.auto_unfollow_all_followers(unfollow_num)
-  
-  #Random Wait Up to 3 min
+ 
+#Like
+def do_like(self):
+  if cntrl_like == 1:
+    try:
+      rndLike=random.randint(0,len(likeSourceList)-1)
+      print("rndLike: " + str(rndLike))
+      likeSource=likeSourceList[rndLike]
+      print("likeSource: " + str(likeSource))
+      my_bot.auto_fav(likeSource, count=likes)
+    except:
+      print("This didn't work for some reason!")  
+
+
+for x in range(repeat_actions):
+  print("Loop Number: " + str(x))
+
+  option = random.randint(0, 4)
+  if option == 0:
+    print("do_follow")    
+  elif option == 1:
+    print("do_unfollow") 
+  elif option == 2:
+    print("do_retweet") 
+  elif option == 3:
+    print("do_like") 
+  else option == 4:
+    print("do_message") 
+ 
+  #Random Wait
   time.sleep(random() * wait_time * 60)
     
     
