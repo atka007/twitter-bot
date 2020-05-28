@@ -12,6 +12,9 @@ reTweetSourceList = ["11hr11min","mashable","wired","cnet","EducationalPic","Emo
 likeSourceList = ["luxury","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","11hr11min","luxurywatches","kotaku",
                   "lamborghini","delorean","luxuryvacation"]
 
+greetingList = ['Hey', 'Hi', 'Hello']
+messages = ["please follow us @feed_gift !","you must check us out @feed_gift !","have you heard of www.gift-feed.com? Please follow us @feed_gift to learn more!"]
+
 #Timers
 wait_time = 4
 repeat_actions = 30
@@ -25,6 +28,7 @@ cntrl_follow = 0
 cntrl_unfollow = 0
 cntrl_retweet = 1
 cntrl_like = 1
+cntrl_message = 1
 
 daily_actions = repeat_actions * ((accounts * max_actions) + likes + retweets)
 print("Daily Actions: " + str(daily_actions))
@@ -39,7 +43,39 @@ my_bot.sync_follows()
 def do_follow(self):
   if cntrl_follow == 1:
     rnd=random.randint(1,max_actions) 
-    my_bot.auto_follow_followers_of_user("CNET", count=rnd)  
+    
+    rndFollow=random.randint(0,len(reTweetSourceList)-1)
+    print("rndFollow: " + str(rndFollow))
+    followSource=reTweetSourceList[rndFollow]
+    print("followSource: " + str(followSource))   
+        
+    my_bot.auto_follow_followers_of_user(followSource, count=rnd) 
+    
+#DM
+def do_message(self):
+  if cntrl_message == 1:
+    rnd=random.randint(1,max_actions) 
+    
+    #Calculate target
+    rndFollow=random.randint(0,len(reTweetSourceList)-1)
+    print("rndFollow: " + str(rndFollow))
+    followSource=reTweetSourceList[rndFollow]
+    print("followSource: " + str(followSource)) 
+    
+    #Calculate greeting
+    rndGreeting=random.randint(0,len(greetingList)-1)
+    print("rndGreeting: " + str(rndGreeting))
+    greeting=greetingList[rndGreeting]
+    print("Greeting: " + str(greeting)) 
+    
+    #Calculate message
+    rndMessage=random.randint(0,len(messageList)-1)
+    print("rndMessage: " + str(rndMessage))
+    message=messageList[rndMessage]
+    print("Message: " + str(message)) 
+    
+    #Send DM
+    #my_bot.send_dm(followSource, greeting, message, count=rnd):
     
 #Unfolow
 def do_unfollow(self):
