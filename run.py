@@ -20,10 +20,10 @@ accounts = 3
 max_actions = 3
 
 #Controls
-cntrl_follow = 1
-cntrl_unfollow = 1
+cntrl_follow = 0
+cntrl_unfollow = 0
 cntrl_retweet = 1
-cntrl_like = 1
+cntrl_like = 0
 
 daily_actions = repeat_actions * ((accounts * max_actions) + likes + retweets)
 print("Daily Actions: " + str(daily_actions))
