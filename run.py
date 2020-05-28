@@ -13,7 +13,7 @@ likeSourceList = ["luxury","mashable","wired","cnet","EmojiMashupPlus","Lifehack
                   "lamborghini","delorean","luxuryvacation"]
 
 #Timers
-wait_time = 2
+wait_time = 4
 repeat_actions = 30
 likes = 1
 retweets = 1
