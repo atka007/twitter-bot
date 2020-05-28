@@ -477,23 +477,20 @@ class TwitterBot:
         following = self.get_follows_list()
         followers_of_user = set(self.TWITTER_CONNECTION.followers.ids(screen_name=user_twitter_handle)["ids"][:count])
         do_not_follow = self.get_do_not_follow_list()
-		
-		print('Starting to send messages... ')
-		
-		for user_id in followers_of_user:
-			try:
-				if (user_id not in following and user_id not in do_not_follow):
+        
+        for user_id in followers_of_user:
+            try:
+                if (user_id not in following and user_id not in do_not_follow):
                     self.wait_on_action()
-					
-					# sends dm
-					username = api.get_user(user_id).screen_name
-					api.send_direct_message(user_id=user_id, text='{} {},\n{}'.format(greeting, username, message))
-					#total_followed += 1
-					#if total_followed % 5 == 0:
-					#	print(str(total_followed) + ' messages sent so far.')
-					print('Sent the user a DM. Sleeping 45 seconds.')
-					sleep(45)
-
+                    
+                    # sends dm
+                    username = api.get_user(user_id).screen_name
+                    api.send_direct_message(user_id=user_id, text='{} {},\n{}'.format(greeting, username, message))
+                    #total_followed += 1
+                    #if total_followed % 5 == 0:
+                    #   print(str(total_followed) + ' messages sent so far.')
+                    print('Sent the user a DM. Sleeping 45 seconds.')
+                    sleep(45)
             except TwitterHTTPError as api_error:
                 # quit on rate limit errors
                 if "unable to send messages to more people at this time" in str(api_error).lower():
