@@ -13,7 +13,7 @@ likeSourceList = ["luxury","mashable","wired","cnet","EmojiMashupPlus","Lifehack
                   "lamborghini","delorean","luxuryvacation"]
 
 greetingList = ['Hey', 'Hi', 'Hello']
-messages = ["please follow us @feed_gift !","you must check us out @feed_gift !","have you heard of www.gift-feed.com? Please follow us @feed_gift to learn more!"]
+messageList = ["please follow us @feed_gift !","you must check us out @feed_gift !","have you heard of www.gift-feed.com? Please follow us @feed_gift to learn more!"]
 
 #Timers
 wait_time = 4
