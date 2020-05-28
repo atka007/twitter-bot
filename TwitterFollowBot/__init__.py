@@ -485,7 +485,7 @@ class TwitterBot:
 				if (user_id not in following and user_id not in do_not_follow):
                     self.wait_on_action()
 					
-					# sends dm.
+					# sends dm
 					username = api.get_user(user_id).screen_name
 					api.send_direct_message(user_id=user_id, text='{} {},\n{}'.format(greeting, username, message))
 					#total_followed += 1
