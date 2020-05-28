@@ -481,7 +481,8 @@ class TwitterBot:
         for user_id in followers_of_user:
             try:
                 if (user_id not in following and user_id not in do_not_follow):
-                    self.wait_on_action()
+					
+					#self.wait_on_action()
                     
                     # sends dm
                     username = self.TWITTER_CONNECTION.get_user(user_id).screen_name
