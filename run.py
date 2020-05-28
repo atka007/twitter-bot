@@ -75,7 +75,7 @@ def do_message():
     print("Message: " + str(message)) 
     
     #Send DM
-    my_bot.send_dm(followSource, greeting, message, count=rnd):
+    my_bot.send_dm(followSource, greeting, message, count=rnd)
     
 #Unfolow
 def do_unfollow():
