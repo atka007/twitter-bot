@@ -40,7 +40,7 @@ print("Running Bot!")
 my_bot.sync_follows()
 
 #Follow
-def do_follow(self):
+def do_follow():
   if cntrl_follow == 1:
     rnd=random.randint(1,max_actions) 
     
@@ -52,7 +52,7 @@ def do_follow(self):
     my_bot.auto_follow_followers_of_user(followSource, count=rnd) 
     
 #DM
-def do_message(self):
+def do_message():
   if cntrl_message == 1:
     rnd=random.randint(1,max_actions) 
     
@@ -78,7 +78,7 @@ def do_message(self):
     my_bot.send_dm(followSource, greeting, message, count=rnd):
     
 #Unfolow
-def do_unfollow(self):
+def do_unfollow():
   if cntrl_unfollow == 1:
     unfollow_num = accounts * max_actions
     my_bot.auto_unfollow_all_followers(unfollow_num)
@@ -124,6 +124,7 @@ for x in range(repeat_actions):
     do_like()
   else:
     print("do_message") 
+    do_message()
  
   #Random Wait
   wait_for = wait_time * random.randint(0, 60)
