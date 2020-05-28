@@ -27,7 +27,6 @@ from itertools import cycle
 from random import shuffle
 
 class TwitterBot:
-
     """
         Bot that automates several actions on Twitter, such as following users
         and favoriting tweets.
@@ -474,7 +473,7 @@ class TwitterBot:
         """
             Send a DM to users that don't follow you.
         """
-
+		
         following = self.get_follows_list()
         followers_of_user = set(self.TWITTER_CONNECTION.followers.ids(screen_name=user_twitter_handle)["ids"][:count])
         do_not_follow = self.get_do_not_follow_list()
@@ -482,10 +481,8 @@ class TwitterBot:
 		print('Starting to send messages... ')
 		
 		for user_id in followers_of_user:
-            try:
-                if (user_id not in following and
-                        user_id not in do_not_follow):
-
+			try:
+				if (user_id not in following and user_id not in do_not_follow):
                     self.wait_on_action()
 					
 					# sends dm.
@@ -504,8 +501,7 @@ class TwitterBot:
                           "Wait a while before running the bot again or gain "
                           "more followers.", file=sys.stderr)
                     return
-                
-    
+                    
     def favorite_following_tweets(self):
         """
             Favorites a random tweet of followed accounts
