@@ -48,7 +48,7 @@ def do_unfollow(self):
     my_bot.auto_unfollow_all_followers(unfollow_num)
 
 #Retweet
-def do_retweet(self):
+def do_retweet():
   if cntrl_retweet == 1:
     try:
       rndTweet=random.randint(0,len(reTweetSourceList)-1)
@@ -60,7 +60,7 @@ def do_retweet(self):
       print("This didn't work for some reason!")  
  
 #Like
-def do_like(self):
+def do_like():
   if cntrl_like == 1:
     try:
       rndLike=random.randint(0,len(likeSourceList)-1)
