@@ -477,7 +477,7 @@ class TwitterBot:
         following = self.get_follows_list()
         followers_of_user = set(self.TWITTER_CONNECTION.followers.ids(screen_name=user_twitter_handle)["ids"][:count])
         do_not_follow = self.get_do_not_follow_list()
-	
+		
 		print('Starting to send messages... ')
 		
 		for user_id in followers_of_user:
