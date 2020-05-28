@@ -83,7 +83,7 @@ for x in range(repeat_actions):
     print("do_retweet") 
   elif option == 3:
     print("do_like") 
-  else option == 4:
+  else:
     print("do_message") 
  
   #Random Wait
