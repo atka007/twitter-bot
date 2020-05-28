@@ -485,7 +485,7 @@ class TwitterBot:
 					#self.wait_on_action()
                     
                     # sends dm
-                    username = self.TWITTER_CONNECTION.get_user(user_id).screen_name
+                    username = self.TWITTER_CONNECTION.get_user(user_id).screen_name  #not working
                     self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text='{} {},\n{}'.format(greeting, username, message))
                     #total_followed += 1
                     #if total_followed % 5 == 0:
