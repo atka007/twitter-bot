@@ -9,11 +9,12 @@ my_bot = TwitterBot()
 reTweetSourceList = ["11hr11min","mashable","wired","cnet","EducationalPic","EmojiMashupPlus","Lifehacker","engadget",
                      "verge","thenextweb","digitaltrends","roadshow","themotleyfool","hypebeast","DIYDrones","BritishGQ",
                      "LouboutinWorld","univercurious","kicksonfire","theDIYhacks","omglifehacks"]
-likeSourceList = ["luxury","mashable","wired","cnet"]
+likeSourceList = ["luxury","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","11hr11min","luxurywatches","kotaku",
+                  "lamborghini","delorean","luxuryvacation"]
 
 #Timers
-wait_time = 1
-repeat_actions = 300
+wait_time = 2
+repeat_actions = 30
 likes = 1
 retweets = 1
 accounts = 3
@@ -23,7 +24,7 @@ max_actions = 3
 cntrl_follow = 0
 cntrl_unfollow = 0
 cntrl_retweet = 1
-cntrl_like = 0
+cntrl_like = 1
 
 daily_actions = repeat_actions * ((accounts * max_actions) + likes + retweets)
 print("Daily Actions: " + str(daily_actions))
@@ -87,7 +88,7 @@ for x in range(repeat_actions):
     print("do_message") 
  
   #Random Wait
-  wait_for = 6 * random.randint(0, wait_time)
+  wait_for = 60 * random.randint(0, wait_time)
   time.sleep(wait_for)
     
     
