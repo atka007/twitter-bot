@@ -88,7 +88,8 @@ for x in range(repeat_actions):
     print("do_message") 
  
   #Random Wait
-  wait_for = 60 * random.randint(0, wait_time)
+  wait_for = wait_time * random.randint(0, 60)
+  print("Waiting for: " + str(wait_for) + " seconds")
   time.sleep(wait_for)
     
     
