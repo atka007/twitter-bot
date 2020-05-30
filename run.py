@@ -12,7 +12,7 @@ reTweetSourceList = ["11hr11min","mashable","wired","cnet","EducationalPic","Emo
 likeSourceList = ["luxury","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","11hr11min","luxurywatches","kotaku",
                   "lamborghini","delorean","luxuryvacation"]
 
-greetingList = ["Hey", "Hi", "Hello"]
+#greetingList = ["Hey", "Hi", "Hello"]
 #messageList = ["please follow us @feed_gift !","you must check us out @feed_gift !",
 #               "have you heard of www.gift-feed.com? Please follow us @feed_gift to learn more!"]
 
