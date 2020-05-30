@@ -65,21 +65,21 @@ def do_message():
     
     #Calculate target
     rndFollow=random.randint(0,len(reTweetSourceList)-1)
-    print("rndFollow: " + str(rndFollow))
+    #print("rndFollow: " + str(rndFollow))
     followSource=reTweetSourceList[rndFollow]
     print("followSource: " + str(followSource)) 
     
     #Calculate greeting
     rndGreeting=random.randint(0,len(greetingList)-1)
-    print("rndGreeting: " + str(rndGreeting))
+    #print("rndGreeting: " + str(rndGreeting))
     greeting=greetingList[rndGreeting]
-    print("Greeting: " + str(greeting)) 
+    #print("Greeting: " + str(greeting)) 
     
     #Calculate message
     rndMessage=random.randint(0,len(messageList)-1)
-    print("rndMessage: " + str(rndMessage))
+    #print("rndMessage: " + str(rndMessage))
     message=messageList[rndMessage]
-    print("Message: " + str(message)) 
+    #print("Message: " + str(message)) 
     
     #Send DM
     my_bot.send_dm(followSource, greeting, message, count=rnd)
