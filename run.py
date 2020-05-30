@@ -12,8 +12,15 @@ reTweetSourceList = ["11hr11min","mashable","wired","cnet","EducationalPic","Emo
 likeSourceList = ["luxury","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","11hr11min","luxurywatches","kotaku",
                   "lamborghini","delorean","luxuryvacation"]
 
-greetingList = ['Hey', 'Hi', 'Hello']
-messageList = ["please follow us @feed_gift !","you must check us out @feed_gift !","have you heard of www.gift-feed.com? Please follow us @feed_gift to learn more!"]
+greetingList = ["Hey", "Hi", "Hello"]
+#messageList = ["please follow us @feed_gift !","you must check us out @feed_gift !",
+#               "have you heard of www.gift-feed.com? Please follow us @feed_gift to learn more!"]
+
+greetingList = [""]
+messageList = ["Yes, gifting is a form of love language. During this hard times, nothing beats genuine gesture of love and care by sending our loved ones gifts for all occasion from @feed_gift!",
+               "No parties, no problem! Show your loved one you still care by sending them exciting gifts from @feed_gift ! Check out as there are tons of new items everyday!",
+               "Father's day is coming soon!!! Get your dad, partner, husband, brother and uncles the best, craziest and most affordable gift from @feed_gift!",
+               "Can't give hugs and kisses via Zoom?! Check out @feed_gift for variety of gift items you can give to your loved ones."]
 
 #Timers
 wait_time = 4
