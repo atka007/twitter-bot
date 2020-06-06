@@ -496,7 +496,8 @@ class TwitterBot:
                 #self.wait_on_action()
                 
                 try:
-                    self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text=message)                    
+                    #self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text=message)   
+		            self.TWITTER_CONNECTION.direct_messages.new(user_id=user_id,text=message)  
                 except BaseException as e:
                     print("Failed on_direct_message()", str(e))
                 
@@ -522,7 +523,7 @@ class TwitterBot:
 			
     def favorite_following_tweets(self):
         """
-            Favorites a random tweet of followed accounts
+            Favorites a random tweet of followed accounts   
             
         """
         num_tweets = random.randint(0, 10)
