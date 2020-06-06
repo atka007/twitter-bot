@@ -36,8 +36,8 @@ class TwitterBot:
     """
 
     # do twitter auth stuff
-    auth = tweepy.OAuthHandler(5qwraOvAAPSAlDpYPKJQUFGPp,znFiO6EZR5dvbrrf9h1CWIQbxNFXD6Rc8vPYU5aEvmHkAANLk9) 
-    auth.set_access_token(1152457398512054272-sRxbtiNoNWk28u9O8o9vJ2ynDIC9Ss,PLxBaQfy3SJkIceAUI3W195hOtZKX3TvFQ1veGvOT9L49)
+    auth = tweepy.OAuthHandler("5qwraOvAAPSAlDpYPKJQUFGPp","znFiO6EZR5dvbrrf9h1CWIQbxNFXD6Rc8vPYU5aEvmHkAANLk9") 
+    auth.set_access_token("1152457398512054272-sRxbtiNoNWk28u9O8o9vJ2ynDIC9Ss","PLxBaQfy3SJkIceAUI3W195hOtZKX3TvFQ1veGvOT9L49")
     api = tweepy.API(auth) # Get our API object
 
 
