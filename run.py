@@ -24,20 +24,23 @@ messageList = ["Yes, gifting is a form of love language. During this hard times,
 
 #Timers
 wait_time = 4
-repeat_actions = 1
-likes = 1
-retweets = 1
-accounts = 3
-max_actions = 3
+repeat_actions = 30
+
+#Counters
+numFollowed = 0
+numUnfollowed = 0
+numLiked = 0
+numTweeted = 0
+numMessaged = 0
 
 #Controls
-cntrl_follow = 0
-cntrl_unfollow = 0
-cntrl_retweet = 0
+cntrl_follow = 1
+cntrl_unfollow = 1
+cntrl_retweet = 1
 cntrl_like = 1
-cntrl_message = 1
+cntrl_message = 0
 
-daily_actions = repeat_actions * ((accounts * max_actions) + likes + retweets)
+daily_actions = repeat_actions * wait_time)
 print("Daily Actions: " + str(daily_actions))
 
 print("Running Bot!")
@@ -56,7 +59,8 @@ def do_follow():
     followSource=reTweetSourceList[rndFollow]
     print("followSource: " + str(followSource))   
         
-    my_bot.auto_follow_followers_of_user(followSource, count=rnd) 
+    my_bot.auto_follow_followers_of_user(followSource, count=rnd)     
+    numFollowed = numFollowed + 1
     
 #DM
 def do_message():
@@ -83,12 +87,15 @@ def do_message():
     
     #Send DM
     my_bot.send_dm(followSource, greeting, message, count=rnd)
+    numMessaged = numMessaged + 1
     
 #Unfolow
 def do_unfollow():
   if cntrl_unfollow == 1:
     unfollow_num = accounts * max_actions
     my_bot.auto_unfollow_all_followers(unfollow_num)
+    numUnfollowed = numUnfollowed + 1
+
 
 #Retweet
 def do_retweet():
@@ -99,8 +106,10 @@ def do_retweet():
       reTweetSource=reTweetSourceList[rndTweet]
       print("reTweetSource: " + str(reTweetSource))   
       my_bot.auto_rt(reTweetSource, count=retweets)
+      numTweeted = numTweeted + 1
     except:
       print("This didn't work for some reason!")  
+      
  
 #Like
 def do_like():
@@ -111,21 +120,30 @@ def do_like():
       likeSource=likeSourceList[rndLike]
       print("likeSource: " + str(likeSource))
       my_bot.auto_fav(likeSource, count=likes)
+      numLiked = numLiked + 1
     except:
       print("This didn't work for some reason!")  
 
 
 for x in range(repeat_actions):
-  print("Loop Number: " + str(x))
-  
-  do_message()
-
-  '''
+  print("Action Number: ******************  " + str(x) + "  ******************  ")
+  #Counters
+  print("Followed Number: " + str(numFollowed))
+  print("Unfollowed Number: " + str(numUnfollowed))
+  print("Liked Number: " + str(numLiked))
+  print("Tweeted Number: " + str(numTweeted))
+  print("Messaged Number: " + str(numMessaged))
+      
   option = random.randint(0, 4)
+  
+  #do_message()
+  
   if option == 0:
-    print("do_follow")    
+    print("do_follow")
+    do_follow()
   elif option == 1:
-    print("do_unfollow") 
+    print("do_unfollow")
+    do_unfollow()
   elif option == 2:
     print("do_retweet")
     do_retweet()
@@ -134,14 +152,14 @@ for x in range(repeat_actions):
     do_like()
   else:
     print("do_message") 
-    do_message()
+    print("DM not working yet!") 
+    #do_message()
  
   #Random Wait
-  wait_for = wait_time * random.randint(0, 60)
+  wait_for = wait_time * random.randint(2, 60)
   print("Waiting for: " + str(wait_for) + " seconds")
   time.sleep(wait_for)
   
-  '''
     
     
 #my_bot.auto_follow("CNET")    
