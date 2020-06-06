@@ -495,15 +495,15 @@ class TwitterBot:
                 # sends dm
                 #self.wait_on_action()
                 
-                #try:
-                    #api.send_direct_message(user_id==user_id,text=message)
-                #except BaseException as e:
-                    #print("Failed on_direct_message()", str(e))
+                try:
+                    self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text=message)                    
+                except BaseException as e:
+                    print("Failed on_direct_message()", str(e))
                 
                 #username = self.TWITTER_CONNECTION.get_user(user_id).screen_name  #not working
                 #self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text='{} {},\n{}'.format(greeting, username, message))
                 
-                self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text='{}'.format(message))
+                #self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text='{}'.format(message))
                 
                 #total_followed += 1
                 #if total_followed % 5 == 0:
@@ -523,6 +523,7 @@ class TwitterBot:
     def favorite_following_tweets(self):
         """
             Favorites a random tweet of followed accounts
+            
         """
         num_tweets = random.randint(0, 10)
         user_tweets = t.statuses.user_timeline(user_id=user_id)
