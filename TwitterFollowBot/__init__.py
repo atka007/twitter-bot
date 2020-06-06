@@ -496,8 +496,8 @@ class TwitterBot:
                 #self.wait_on_action()
                 
                 try:
-                    #self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text=message)   
-		            self.TWITTER_CONNECTION.direct_messages.new(user_id=user_id,text=message)  
+                    #self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text=message)
+                    self.TWITTER_CONNECTION.direct_messages.new(user_id=user_id,text=message)  
                 except BaseException as e:
                     print("Failed on_direct_message()", str(e))
                 
