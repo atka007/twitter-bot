@@ -19,6 +19,7 @@ the Twitter Bot library. If not, see http://www.gnu.org/licenses/.
 """
 from __future__ import print_function
 from twitter import Twitter, OAuth, TwitterHTTPError
+import tweepy
 import os
 import sys
 import time
@@ -26,11 +27,19 @@ import random
 from itertools import cycle
 from random import shuffle
 
+
+
 class TwitterBot:
     """
         Bot that automates several actions on Twitter, such as following users
         and favoriting tweets.
     """
+
+    # do twitter auth stuff
+    auth = tweepy.OAuthHandler(5qwraOvAAPSAlDpYPKJQUFGPp,znFiO6EZR5dvbrrf9h1CWIQbxNFXD6Rc8vPYU5aEvmHkAANLk9) 
+    auth.set_access_token(1152457398512054272-sRxbtiNoNWk28u9O8o9vJ2ynDIC9Ss,PLxBaQfy3SJkIceAUI3W195hOtZKX3TvFQ1veGvOT9L49)
+    api = tweepy.API(auth) # Get our API object
+
 
     def __init__(self, config_file="config.txt"):
         # this variable contains the configuration for the bot
@@ -479,13 +488,23 @@ class TwitterBot:
         do_not_follow = self.get_do_not_follow_list()
 
         for user_id in followers_of_user:
+    
+            
             #try:
             if (user_id not in following and user_id not in do_not_follow):
                 # sends dm
                 #self.wait_on_action()
+                
+                try:
+                    api.send_direct_message(user_id==user_id,text=message)
+                except BaseException as e:
+                    print("Failed on_direct_message()", str(e))
+                
                 #username = self.TWITTER_CONNECTION.get_user(user_id).screen_name  #not working
                 #self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text='{} {},\n{}'.format(greeting, username, message))
-                self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text='{}'.format(message))
+                
+                #self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text='{}'.format(message))
+                
                 #total_followed += 1
                 #if total_followed % 5 == 0:
                 #   print(str(total_followed) + ' messages sent so far.')
