@@ -24,7 +24,7 @@ messageList = ["Yes, gifting is a form of love language. During this hard times,
 
 #Timers
 wait_time = 4
-repeat_actions = 30
+repeat_actions = 1
 likes = 1
 retweets = 1
 accounts = 3
@@ -117,7 +117,10 @@ def do_like():
 
 for x in range(repeat_actions):
   print("Loop Number: " + str(x))
+  
+  do_message()
 
+  '''
   option = random.randint(0, 4)
   if option == 0:
     print("do_follow")    
@@ -137,6 +140,8 @@ for x in range(repeat_actions):
   wait_for = wait_time * random.randint(0, 60)
   print("Waiting for: " + str(wait_for) + " seconds")
   time.sleep(wait_for)
+  
+  '''
     
     
 #my_bot.auto_follow("CNET")    
