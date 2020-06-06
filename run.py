@@ -40,7 +40,7 @@ cntrl_retweet = 1
 cntrl_like = 1
 cntrl_message = 0
 
-daily_actions = repeat_actions * wait_time)
+daily_actions = repeat_actions * wait_time
 print("Daily Actions: " + str(daily_actions))
 
 print("Running Bot!")
