@@ -19,7 +19,7 @@ the Twitter Bot library. If not, see http://www.gnu.org/licenses/.
 """
 from __future__ import print_function
 from twitter import Twitter, OAuth, TwitterHTTPError
-import tweepy
+#import tweepy
 import os
 import sys
 import time
@@ -36,9 +36,9 @@ class TwitterBot:
     """
 
     # do twitter auth stuff
-    auth = tweepy.OAuthHandler("5qwraOvAAPSAlDpYPKJQUFGPp","znFiO6EZR5dvbrrf9h1CWIQbxNFXD6Rc8vPYU5aEvmHkAANLk9") 
-    auth.set_access_token("1152457398512054272-sRxbtiNoNWk28u9O8o9vJ2ynDIC9Ss","PLxBaQfy3SJkIceAUI3W195hOtZKX3TvFQ1veGvOT9L49")
-    api = tweepy.API(auth) # Get our API object
+    #auth = tweepy.OAuthHandler("5qwraOvAAPSAlDpYPKJQUFGPp","znFiO6EZR5dvbrrf9h1CWIQbxNFXD6Rc8vPYU5aEvmHkAANLk9") 
+    #auth.set_access_token("1152457398512054272-sRxbtiNoNWk28u9O8o9vJ2ynDIC9Ss","PLxBaQfy3SJkIceAUI3W195hOtZKX3TvFQ1veGvOT9L49")
+    #api = tweepy.API(auth) # Get our API object
 
 
     def __init__(self, config_file="config.txt"):
@@ -495,21 +495,21 @@ class TwitterBot:
                 # sends dm
                 #self.wait_on_action()
                 
-                try:
-                    api.send_direct_message(user_id==user_id,text=message)
-                except BaseException as e:
-                    print("Failed on_direct_message()", str(e))
+                #try:
+                    #api.send_direct_message(user_id==user_id,text=message)
+                #except BaseException as e:
+                    #print("Failed on_direct_message()", str(e))
                 
                 #username = self.TWITTER_CONNECTION.get_user(user_id).screen_name  #not working
                 #self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text='{} {},\n{}'.format(greeting, username, message))
                 
-                #self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text='{}'.format(message))
+                self.TWITTER_CONNECTION.send_direct_message(user_id=user_id, text='{}'.format(message))
                 
                 #total_followed += 1
                 #if total_followed % 5 == 0:
                 #   print(str(total_followed) + ' messages sent so far.')
-                print('Sent the user a DM. Sleeping 45 seconds.')
-                sleep(45)
+                print('Sent the user a DM. Sleeping 5 seconds.')
+                sleep(5)
             """
             except TwitterHTTPError as api_error:
                 # quit on rate limit errors
