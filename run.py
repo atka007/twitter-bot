@@ -160,7 +160,7 @@ for x in range(repeat_actions):
   #Random Wait
   wait_for = wait_time * random.randint(2, 60)
   print("Waiting for: " + str(wait_for) + " seconds")
-  #time.sleep(wait_for)
+  time.sleep(wait_for)
   
     
     
