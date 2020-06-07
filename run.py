@@ -23,7 +23,7 @@ messageList = ["Yes, gifting is a form of love language. During this hard times,
                "Can't give hugs and kisses via Zoom?! Check out @feed_gift for variety of gift items you can give to your loved ones."]
 
 #Timers
-wait_time = 4
+wait_time = 1
 repeat_actions = 30
 max_actions = 3
 
@@ -61,7 +61,7 @@ def do_follow():
     print("followSource: " + str(followSource))   
         
     my_bot.auto_follow_followers_of_user(followSource, count=rnd)     
-    numFollowed = numFollowed + 1
+    numFollowed =+ 1
     
 #DM
 def do_message():
@@ -88,14 +88,14 @@ def do_message():
     
     #Send DM
     my_bot.send_dm(followSource, greeting, message, count=rnd)
-    numMessaged = numMessaged + 1
+    numMessaged =+ 1
     
 #Unfolow
 def do_unfollow():
   if cntrl_unfollow == 1:
     unfollow_num = accounts * max_actions
     my_bot.auto_unfollow_all_followers(unfollow_num)
-    numUnfollowed = numUnfollowed + 1
+    numUnfollowed =+ 1
 
 
 #Retweet
@@ -107,7 +107,7 @@ def do_retweet():
       reTweetSource=reTweetSourceList[rndTweet]
       print("reTweetSource: " + str(reTweetSource))   
       my_bot.auto_rt(reTweetSource, count=retweets)
-      numTweeted = numTweeted + 1
+      numTweeted =+ 1
     except:
       print("This didn't work for some reason!")  
       
@@ -121,7 +121,7 @@ def do_like():
       likeSource=likeSourceList[rndLike]
       print("likeSource: " + str(likeSource))
       my_bot.auto_fav(likeSource, count=likes)
-      numLiked = numLiked + 1
+      numLiked =+ 1
     except:
       print("This didn't work for some reason!")  
 
