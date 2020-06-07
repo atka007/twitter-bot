@@ -61,15 +61,13 @@ def do_follow():
     print("followSource: " + str(followSource))   
         
     my_bot.auto_follow_followers_of_user(followSource, count=rnd)     
-    numFollowed =+ 1
-    
+        
 #Unfolow
 def do_unfollow():
   if cntrl_unfollow == 1:
     rnd=random.randint(1,max_actions) 
     my_bot.auto_unfollow_all_followers(rnd)
-    numUnfollowed =+ 1
-
+    
 #Retweet
 def do_retweet():
   if cntrl_retweet == 1:
@@ -79,8 +77,7 @@ def do_retweet():
       print("rndTweet: " + str(rndTweet))
       reTweetSource=reTweetSourceList[rndTweet]
       print("reTweetSource: " + str(reTweetSource))   
-      my_bot.auto_rt(reTweetSource, count=rnd)
-      numTweeted =+ 1
+      my_bot.auto_rt(reTweetSource, count=rnd)      
     except:
       print("This didn't work for some reason!")  
       
@@ -93,8 +90,7 @@ def do_like():
       print("rndLike: " + str(rndLike))
       likeSource=likeSourceList[rndLike]
       print("likeSource: " + str(likeSource))
-      my_bot.auto_fav(likeSource, count=rnd)
-      numLiked =+ 1
+      my_bot.auto_fav(likeSource, count=rnd)      
     except:
       print("This didn't work for some reason!")  
       
@@ -123,7 +119,7 @@ def do_message():
     
     #Send DM
     my_bot.send_dm(followSource, greeting, message, count=rnd)
-    numMessaged =+ 1
+    
     
 #Run the Loop
 for x in range(repeat_actions):
@@ -142,19 +138,24 @@ for x in range(repeat_actions):
   if option == 0:
     print("do_follow")
     do_follow()
+    numFollowed =+ 1
   elif option == 1:
     print("do_unfollow")
     do_unfollow()
+    numUnfollowed =+ 1
   elif option == 2:
     print("do_retweet")
     do_retweet()
+    numTweeted =+ 1
   elif option == 3:
     print("do_like") 
     do_like()
+    numLiked =+ 1
   else:
     print("do_message") 
     print("DM not working yet!") 
     #do_message()
+    numMessaged =+ 1
  
   #Random Wait
   wait_for = wait_time * random.randint(2, 60)
