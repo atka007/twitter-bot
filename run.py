@@ -56,9 +56,9 @@ def do_follow():
     rnd=random.randint(1,max_actions) 
     
     rndFollow=random.randint(0,len(reTweetSourceList)-1)
-    print("rndFollow: " + str(rndFollow))
+    #print("rndFollow: " + str(rndFollow))
     followSource=reTweetSourceList[rndFollow]
-    print("followSource: " + str(followSource))   
+    print("Follow Source: " + str(followSource))   
         
     my_bot.auto_follow_followers_of_user(followSource, count=rnd)     
         
@@ -74,9 +74,9 @@ def do_retweet():
     try:
       rnd=random.randint(1,max_actions) 
       rndTweet=random.randint(0,len(reTweetSourceList)-1)
-      print("rndTweet: " + str(rndTweet))
+      #print("rndTweet: " + str(rndTweet))
       reTweetSource=reTweetSourceList[rndTweet]
-      print("reTweetSource: " + str(reTweetSource))   
+      print("ReTweet Source: " + str(reTweetSource))   
       my_bot.auto_rt(reTweetSource, count=rnd)      
     except:
       print("This didn't work for some reason!")  
@@ -87,9 +87,9 @@ def do_like():
     try:
       rnd=random.randint(1,max_actions) 
       rndLike=random.randint(0,len(likeSourceList)-1)
-      print("rndLike: " + str(rndLike))
+      #print("rndLike: " + str(rndLike))
       likeSource=likeSourceList[rndLike]
-      print("likeSource: " + str(likeSource))
+      print("Like Source: " + str(likeSource))
       my_bot.auto_fav(likeSource, count=rnd)      
     except:
       print("This didn't work for some reason!")  
@@ -103,7 +103,7 @@ def do_message():
     rndFollow=random.randint(0,len(reTweetSourceList)-1)
     #print("rndFollow: " + str(rndFollow))
     followSource=reTweetSourceList[rndFollow]
-    print("followSource: " + str(followSource)) 
+    print("Follow Source: " + str(followSource)) 
     
     #Calculate greeting
     rndGreeting=random.randint(0,len(greetingList)-1)
@@ -132,27 +132,27 @@ for x in range(repeat_actions):
   #do_message()
   
   if option == 0:
-    print("do_follow")
+    print("Follow Action!")
     do_follow()
     numFollowed += 1
 
   elif option == 1:
-    print("do_unfollow")
+    print("Unfollow Action!")
     do_unfollow()
     numUnfollowed += 1
 
   elif option == 2:
-    print("do_retweet")
+    print("Retweet Action!")
     do_retweet()
     numTweeted += 1
 
   elif option == 3:
-    print("do_like") 
+    print("Like Action!") 
     do_like()
     numLiked += 1
 
   else:
-    print("do_message") 
+    print("Message Action!") 
     print("DM not working yet!") 
     #do_message()
     numMessaged += 1
