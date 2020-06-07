@@ -25,7 +25,7 @@ messageList = ["Yes, gifting is a form of love language. During this hard times,
 #Timers
 wait_time = 1
 repeat_actions = 10
-max_actions = 3
+max_actions = 1
 
 #Counters
 numFollowed = 0
@@ -63,6 +63,41 @@ def do_follow():
     my_bot.auto_follow_followers_of_user(followSource, count=rnd)     
     numFollowed =+ 1
     
+#Unfolow
+def do_unfollow():
+  if cntrl_unfollow == 1:
+    rnd=random.randint(1,max_actions) 
+    my_bot.auto_unfollow_all_followers(rnd)
+    numUnfollowed =+ 1
+
+#Retweet
+def do_retweet():
+  if cntrl_retweet == 1:
+    try:
+      rnd=random.randint(1,max_actions) 
+      rndTweet=random.randint(0,len(reTweetSourceList)-1)
+      print("rndTweet: " + str(rndTweet))
+      reTweetSource=reTweetSourceList[rndTweet]
+      print("reTweetSource: " + str(reTweetSource))   
+      my_bot.auto_rt(reTweetSource, count=rnd)
+      numTweeted =+ 1
+    except:
+      print("This didn't work for some reason!")  
+      
+#Like
+def do_like():
+  if cntrl_like == 1:
+    try:
+      rnd=random.randint(1,max_actions) 
+      rndLike=random.randint(0,len(likeSourceList)-1)
+      print("rndLike: " + str(rndLike))
+      likeSource=likeSourceList[rndLike]
+      print("likeSource: " + str(likeSource))
+      my_bot.auto_fav(likeSource, count=rnd)
+      numLiked =+ 1
+    except:
+      print("This didn't work for some reason!")  
+      
 #DM
 def do_message():
   if cntrl_message == 1:
@@ -90,42 +125,7 @@ def do_message():
     my_bot.send_dm(followSource, greeting, message, count=rnd)
     numMessaged =+ 1
     
-#Unfolow
-def do_unfollow():
-  if cntrl_unfollow == 1:
-    unfollow_num = accounts * max_actions
-    my_bot.auto_unfollow_all_followers(unfollow_num)
-    numUnfollowed =+ 1
-
-
-#Retweet
-def do_retweet():
-  if cntrl_retweet == 1:
-    try:
-      rndTweet=random.randint(0,len(reTweetSourceList)-1)
-      print("rndTweet: " + str(rndTweet))
-      reTweetSource=reTweetSourceList[rndTweet]
-      print("reTweetSource: " + str(reTweetSource))   
-      my_bot.auto_rt(reTweetSource, count=retweets)
-      numTweeted =+ 1
-    except:
-      print("This didn't work for some reason!")  
-      
- 
-#Like
-def do_like():
-  if cntrl_like == 1:
-    try:
-      rndLike=random.randint(0,len(likeSourceList)-1)
-      print("rndLike: " + str(rndLike))
-      likeSource=likeSourceList[rndLike]
-      print("likeSource: " + str(likeSource))
-      my_bot.auto_fav(likeSource, count=likes)
-      numLiked =+ 1
-    except:
-      print("This didn't work for some reason!")  
-
-
+#Run the Loop
 for x in range(repeat_actions):
   print("Action Number: ******************  " + str(x) + "  ******************  ")
   #Counters
