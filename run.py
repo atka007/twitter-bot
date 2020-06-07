@@ -24,7 +24,7 @@ messageList = ["Yes, gifting is a form of love language. During this hard times,
 
 #Timers
 wait_time = 1
-repeat_actions = 30
+repeat_actions = 10
 max_actions = 3
 
 #Counters
@@ -135,7 +135,7 @@ for x in range(repeat_actions):
   print("Tweeted Number: " + str(numTweeted))
   print("Messaged Number: " + str(numMessaged))
       
-  option = random.randint(0, 4)
+  option = random.randint(0, 3)
   
   #do_message()
   
@@ -159,7 +159,7 @@ for x in range(repeat_actions):
   #Random Wait
   wait_for = wait_time * random.randint(2, 60)
   print("Waiting for: " + str(wait_for) + " seconds")
-  time.sleep(wait_for)
+  #time.sleep(wait_for)
   
     
     
