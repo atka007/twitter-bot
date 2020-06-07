@@ -125,11 +125,7 @@ def do_message():
 for x in range(repeat_actions):
   print("Action Number: ******************  " + str(x) + "  ******************  ")
   #Counters
-  print("Followed Number: " + str(numFollowed))
-  print("Unfollowed Number: " + str(numUnfollowed))
-  print("Liked Number: " + str(numLiked))
-  print("Tweeted Number: " + str(numTweeted))
-  print("Messaged Number: " + str(numMessaged))
+  print("Followed #: " + str(numFollowed) + " || " + "Unfollowed #: " + str(numUnfollowed) + " || " + "Liked #: " + str(numLiked) + " || " + "Tweeted #: " + str(numTweeted) + " || " + "Messaged #: " + str(numMessaged))
       
   option = random.randint(0, 3)
   
