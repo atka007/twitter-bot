@@ -130,8 +130,9 @@ for x in range(repeat_actions):
   print("Action Number: ******************  " + str(x) + "  ******************  ")
   #Counters
   print("Followed #: " + str(numFollowed) + " || " + "Unfollowed #: " + str(numUnfollowed) + " || " + "Liked #: " + str(numLiked) + " || " + "Tweeted #: " + str(numTweeted) + " || " + "Messaged #: " + str(numMessaged))
-  print("Elapsed Time: " + str(elapsed_time)) 
-  
+  #print("Elapsed Time: " + str(elapsed_time))
+  print("Elapsed Time: " + str(time.strftime("%H:%M:%S", time.gmtime(elapsed_time))))
+    
   #do_message()
   
   if option == 0:
