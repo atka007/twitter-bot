@@ -4,6 +4,7 @@ import time
 import math
 
 my_bot = TwitterBot()
+start_time = time.time()
 
 #Lists
 reTweetSourceList = ["11hr11min","mashable","wired","cnet","EducationalPic","EmojiMashupPlus","Lifehacker","engadget",
@@ -123,11 +124,13 @@ def do_message():
     
 #Run the Loop
 for x in range(repeat_actions):
+  option = random.randint(0, 3)
+  elapsed_time = time.time() - start_time
+  
   print("Action Number: ******************  " + str(x) + "  ******************  ")
   #Counters
   print("Followed #: " + str(numFollowed) + " || " + "Unfollowed #: " + str(numUnfollowed) + " || " + "Liked #: " + str(numLiked) + " || " + "Tweeted #: " + str(numTweeted) + " || " + "Messaged #: " + str(numMessaged))
-      
-  option = random.randint(0, 3)
+  print("Elapsed Time: " + str(elapsed_time)) 
   
   #do_message()
   
