@@ -7,11 +7,14 @@ my_bot = TwitterBot()
 start_time = time.time()
 
 #Lists
+followSourceList = ["11hr11min","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","engadget",
+                     "verge","thenextweb","digitaltrends","roadshow","themotleyfool","hypebeast","DIYDrones","BritishGQ",
+                     "LouboutinWorld","univercurious","kicksonfire","theDIYhacks","omglifehacks"]
 reTweetSourceList = ["11hr11min","mashable","wired","cnet","EducationalPic","EmojiMashupPlus","Lifehacker","engadget",
                      "verge","thenextweb","digitaltrends","roadshow","themotleyfool","hypebeast","DIYDrones","BritishGQ",
                      "LouboutinWorld","univercurious","kicksonfire","theDIYhacks","omglifehacks"]
 likeSourceList = ["luxury","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","11hr11min","luxurywatches","kotaku",
-                  "lamborghini","delorean","luxuryvacation"]
+                  "lamborghini","delorean","luxuryvacation","drone","wine","whiskey","pool","jewelry","home decor","restoration hardware"]
 
 #greetingList = ["Hey", "Hi", "Hello"]
 #messageList = ["please follow us @feed_gift !","you must check us out @feed_gift !",
@@ -56,9 +59,9 @@ def do_follow():
   if cntrl_follow == 1:
     rnd=random.randint(1,max_actions) 
     
-    rndFollow=random.randint(0,len(reTweetSourceList)-1)
+    rndFollow=random.randint(0,len(followSourceList)-1)
     #print("rndFollow: " + str(rndFollow))
-    followSource=reTweetSourceList[rndFollow]
+    followSource=followSourceList[rndFollow]
     print("Follow Source: " + str(followSource))   
         
     my_bot.auto_follow_followers_of_user(followSource, count=rnd)     
