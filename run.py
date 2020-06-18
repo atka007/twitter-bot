@@ -27,7 +27,7 @@ messageList = ["Yes, gifting is a form of love language. During this hard times,
                "Can't give hugs and kisses via Zoom?! Check out @feed_gift for variety of gift items you can give to your loved ones."]
 
 #Timers
-wait_time = 4
+wait_time = 5
 repeat_actions = 300
 max_actions = 1
 
