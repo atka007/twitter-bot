@@ -30,6 +30,7 @@ messageList = ["Yes, gifting is a form of love language. During this hard times,
 wait_time = 5
 repeat_actions = 300
 max_actions = 1
+max_likes = 2
 
 #Counters
 numFollowed = 0
@@ -89,7 +90,7 @@ def do_retweet():
 def do_like():
   if cntrl_like == 1:
     try:
-      rnd=random.randint(1,max_actions) 
+      rnd=random.randint(1,max_likes) 
       rndLike=random.randint(0,len(likeSourceList)-1)
       #print("rndLike: " + str(rndLike))
       likeSource=likeSourceList[rndLike]
