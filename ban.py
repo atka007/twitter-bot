@@ -163,8 +163,7 @@ for x in range(repeat_actions):
   print("Waiting for: " + str(wait_for) + " seconds")
   time.sleep(wait_for)
   
-    
-    
+  
 #my_bot.auto_follow("CNET")    
 #my_bot.auto_rt("phrase", count=1000)
 #my_bot.auto_unfollow_nonfollowers()
