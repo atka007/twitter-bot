@@ -7,13 +7,13 @@ my_bot = TwitterBot()
 start_time = time.time()
 
 #Lists
-followSourceList = ["11hr11min","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","engadget",
+followSourceList = ["OJessicaNigri","EvilAngelVideo","wired","cnet","EmojiMashupPlus","Lifehacker","engadget",
                      "verge","thenextweb","digitaltrends","roadshow","themotleyfool","hypebeast","DIYDrones","BritishGQ",
                      "LouboutinWorld","univercurious","kicksonfire","theDIYhacks"]
-reTweetSourceList = ["11hr11min","mashable","wired","cnet","EducationalPic","EmojiMashupPlus","Lifehacker","engadget",
+reTweetSourceList = ["EvilAngelVideo","mashable","wired","cnet","EducationalPic","EmojiMashupPlus","Lifehacker","engadget",
                      "verge","thenextweb","digitaltrends","roadshow","themotleyfool","hypebeast","DIYDrones","BritishGQ",
                      "LouboutinWorld","univercurious","kicksonfire","theDIYhacks","omglifehacks"]
-likeSourceList = ["luxury","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","11hr11min","luxurywatches","kotaku",
+likeSourceList = ["EvilAngelVideo","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","11hr11min","luxurywatches","kotaku",
                   "lamborghini","delorean","luxuryvacation","drone","wine","whiskey","pool","jewelry","home decor","restoration hardware"]
 
 #greetingList = ["Hey", "Hi", "Hello"]
