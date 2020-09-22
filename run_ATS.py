@@ -7,29 +7,31 @@ my_bot = TwitterBot()
 start_time = time.time()
 
 #Lists
-followSourceList = ["OJessicaNigri","EvilAngelVideo","wired","cnet","EmojiMashupPlus","Lifehacker","engadget",
-                     "verge","thenextweb","digitaltrends","roadshow","themotleyfool","hypebeast","DIYDrones","BritishGQ",
-                     "LouboutinWorld","univercurious","kicksonfire","theDIYhacks"]
-reTweetSourceList = ["EvilAngelVideo","mashable","wired","cnet","EducationalPic","EmojiMashupPlus","Lifehacker","engadget",
-                     "verge","thenextweb","digitaltrends","roadshow","themotleyfool","hypebeast","DIYDrones","BritishGQ",
-                     "LouboutinWorld","univercurious","kicksonfire","theDIYhacks","omglifehacks"]
-likeSourceList = ["EvilAngelVideo","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","11hr11min","luxurywatches","kotaku",
-                  "lamborghini","delorean","luxuryvacation","drone","wine","whiskey","pool","jewelry","home decor","restoration hardware"]
+followSourceList = ["DJBritStar","MarkusDupree","BrianaBanderas","autumnfallsxoxo","janewildexxx","karleegreyxxx","lindasteelehot1","emilywillisxoxo","TinaKayxxx",
+                  "DreddXXX","Pornhub","AsaAkira","slutsaucekhloe","syrendemerxxx","AlenaCroftXXX","_rush187_","natasha__10_","Katyuskamoonfox","alexgreyxxx",
+                  "KenzieReevesxxx","kj_fetishmodel","Kayden_Kross","jonnidarkko","EMMAHIXOFFICIAL","CanelaSKinOff","livejasmin","EvilAngelVideo","Brazzers","blacked_com",
+                  "tushy_com","vixen","deeper_official","AVNMediaNetwork","AdultBrazil","legal_porno","JulesJordan","sluttyangelss","pervcity","legalpornocz","xhamstercom"]
+reTweetSourceList = ["EvilAngelVideo","livejasmin","Brazzers","blacked_com","tushy_com","vixen","deeper_official","AVNMediaNetwork","AdultBrazil","legal_porno",
+                     "JulesJordan","sluttyangelss","pervcity","legalpornocz","xhamstercom"]
+likeSourceList = ["DJBritStar","MarkusDupree","BrianaBanderas","autumnfallsxoxo","janewildexxx","karleegreyxxx","lindasteelehot1","emilywillisxoxo","TinaKayxxx",
+                  "DreddXXX","Pornhub","AsaAkira","slutsaucekhloe","syrendemerxxx","AlenaCroftXXX","_rush187_","natasha__10_","Katyuskamoonfox","alexgreyxxx",
+                  "KenzieReevesxxx","kj_fetishmodel","Kayden_Kross","jonnidarkko","EMMAHIXOFFICIAL","CanelaSKinOff","livejasmin","EvilAngelVideo","Brazzers","blacked_com",
+                  "tushy_com","vixen","deeper_official","AVNMediaNetwork","AdultBrazil","legal_porno","JulesJordan","sluttyangelss","pervcity","legalpornocz","xhamstercom"]
 
 #greetingList = ["Hey", "Hi", "Hello"]
 #messageList = ["please follow us @feed_gift !","you must check us out @feed_gift !",
 #               "have you heard of www.gift-feed.com? Please follow us @feed_gift to learn more!"]
 
 greetingList = [""]
-messageList = ["Yes, gifting is a form of love language. During this hard times, nothing beats genuine gesture of love and care by sending our loved ones gifts for all occasion from @feed_gift!",
-               "No parties, no problem! Show your loved one you still care by sending them exciting gifts from @feed_gift ! Check out as there are tons of new items everyday!",
-               "Father's day is coming soon!!! Get your dad, partner, husband, brother and uncles the best, craziest and most affordable gift from @feed_gift!",
-               "Can't give hugs and kisses via Zoom?! Check out @feed_gift for variety of gift items you can give to your loved ones."]
+messageList = ["",
+               "",
+               "",
+               ""]
 
 
 #Timers
 wait_time = 6
-repeat_actions = 500
+repeat_actions = 100
 max_actions = 1
 max_likes = 2
 
