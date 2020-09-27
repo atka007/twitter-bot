@@ -11,29 +11,22 @@ import math
    The access token and authentication handler you get them from your twitter developer account.
    Take care not to violate twitter laws.'''
 
-auth = tweepy.OAuthHandler('8u3rDUSn52nSiVAMnWkhn9OZ4','2rQViPaS9dpIeixx8XBDj2J9Gxhfzk5nTMdXG9MTkrXqKjNV4I')
-auth.set_access_token('1085077067140481024-IHYFCPiyGBJ7GfW19nlGqt6A8BfRhg','qr6R5qjqNoBOFWlxiIzeXAztZHQn1LN2eA2ICqYT1t2cR')
+auth = tweepy.OAuthHandler('5qwraOvAAPSAlDpYPKJQUFGPp','znFiO6EZR5dvbrrf9h1CWIQbxNFXD6Rc8vPYU5aEvmHkAANLk9')
+auth.set_access_token('1152457398512054272-sRxbtiNoNWk28u9O8o9vJ2ynDIC9Ss','PLxBaQfy3SJkIceAUI3W195hOtZKX3TvFQ1veGvOT9L49')
 
 api = tweepy.API(auth,wait_on_rate_limit=True,wait_on_rate_limit_notify=True)
 user = api.me()
 print (user.name) #prints your name
 
 #Lists
-followSourceList = ["DJBritStar","MarkusDupree","BrianaBanderas","autumnfallsxoxo","janewildexxx","karleegreyxxx","lindasteelehot1","emilywillisxoxo","TinaKayxxx",
-                  "DreddXXX","Pornhub","AsaAkira","slutsaucekhloe","syrendemerxxx","AlenaCroftXXX","_rush187_","natasha__10_","Katyuskamoonfox","alexgreyxxx",
-                  "KenzieReevesxxx","kj_fetishmodel","Kayden_Kross","jonnidarkko","EMMAHIXOFFICIAL","CanelaSKinOff","livejasmin","EvilAngelVideo","Brazzers","blacked_com",
-                  "tushy_com","vixen","deeper_official","AVNMediaNetwork","AdultBrazil","legal_porno","JulesJordan","sluttyangelss","pervcity","legalpornocz","xhamstercom"]
-
-reTweetSourceList = ["EvilAngelVideo","livejasmin","Brazzers","blacked_com","tushy_com","vixen","deeper_official","AVNMediaNetwork","AdultBrazil","legal_porno",
-                     "JulesJordan","sluttyangelss","pervcity","legalpornocz","xhamstercom"]
-
-likeSourceList = ["DJBritStar","MarkusDupree","BrianaBanderas","autumnfallsxoxo","janewildexxx","karleegreyxxx","lindasteelehot1","emilywillisxoxo","TinaKayxxx",
-                  "DreddXXX","Pornhub","AsaAkira","slutsaucekhloe","syrendemerxxx","AlenaCroftXXX","_rush187_","natasha__10_","Katyuskamoonfox","alexgreyxxx",
-                  "KenzieReevesxxx","kj_fetishmodel","Kayden_Kross","jonnidarkko","EMMAHIXOFFICIAL","CanelaSKinOff","livejasmin","EvilAngelVideo","Brazzers","blacked_com",
-                  "tushy_com","vixen","deeper_official","AVNMediaNetwork","AdultBrazil","legal_porno","JulesJordan","sluttyangelss","pervcity","legalpornocz","xhamstercom"]
-
-
-
+followSourceList = ["11hr11min","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","engadget",
+                     "verge","thenextweb","digitaltrends","roadshow","themotleyfool","hypebeast","DIYDrones","BritishGQ",
+                     "LouboutinWorld","univercurious","kicksonfire","theDIYhacks"]
+reTweetSourceList = ["11hr11min","mashable","wired","cnet","EducationalPic","EmojiMashupPlus","Lifehacker","engadget",
+                     "verge","thenextweb","digitaltrends","roadshow","themotleyfool","hypebeast","DIYDrones","BritishGQ",
+                     "LouboutinWorld","univercurious","kicksonfire","theDIYhacks","omglifehacks"]
+likeSourceList = ["luxury","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","11hr11min","luxurywatches","kotaku",
+                  "lamborghini","delorean","luxuryvacation","drone","wine","whiskey","pool","jewelry","home decor","restoration hardware"]
 
 #Timers
 start_time = time.time()
