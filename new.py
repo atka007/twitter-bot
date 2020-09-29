@@ -54,6 +54,13 @@ print("Daily Actions: " + str(daily_actions))
 
 
 #a variable that hold something you might want to searc on twitter.
+def limit_handled(cursor):
+    while True:
+        try:
+            yield cursor.next()
+        except tweepy.RateLimitError:
+            time.sleep(15 * 60)
+            
 def wait():
     wait_for = wait_time * random.randint(2, 60)
     print("Waiting for: " + str(wait_for) + " seconds")
@@ -103,7 +110,7 @@ def do_follow():
     followSource=followSourceList[rndFollow]
     print("Follow Source: " + str(followSource))                 
 
-    for follower in tweepy.Cursor(api.followers,screen_name=followSource,count=1).items():
+    for follower in limit_handled(tweepy.Cursor(api.followers,screen_name=followSource).items(1)):
         try:
            follower.follow()
            print("Followed:  + str(follower.name) + !") 
@@ -133,7 +140,7 @@ def do_unfollow():
          
 def do_message():
     print(">> Message Action!")
-    for follower in tweepy.Cursor(api.followers,screen_name=followSource,count=1).items():
+    for follower in tweepy.Cursor(api.followers,screen_name=followSource).items(1):
      try:
         #follower.follow()
         #message = "Wishing you a day filled with happiness and a year filled with joy. Happy birthday {follower.name}"
