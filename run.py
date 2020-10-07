@@ -9,10 +9,10 @@ start_time = time.time()
 #Lists
 followSourceList = ["11hr11min","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","engadget",
                      "verge","thenextweb","digitaltrends","roadshow","themotleyfool","hypebeast","DIYDrones","BritishGQ",
-                     "LouboutinWorld","univercurious","kicksonfire","theDIYhacks"]
+                     "LouboutinWorld","univercurious","kicksonfire"]
 reTweetSourceList = ["11hr11min","mashable","wired","cnet","EducationalPic","EmojiMashupPlus","Lifehacker","engadget",
                      "verge","thenextweb","digitaltrends","roadshow","themotleyfool","hypebeast","DIYDrones","BritishGQ",
-                     "LouboutinWorld","univercurious","kicksonfire","theDIYhacks","omglifehacks"]
+                     "LouboutinWorld","univercurious","kicksonfire","omglifehacks"]
 likeSourceList = ["luxury","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","11hr11min","luxurywatches","kotaku",
                   "lamborghini","delorean","luxuryvacation","drone","wine","whiskey","pool","jewelry","home decor","restoration hardware"]
 
