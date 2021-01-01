@@ -28,8 +28,8 @@ messageList = ["Yes, gifting is a form of love language. During this hard times,
 
 
 #Timers
-wait_time = 6
-repeat_actions = 500
+wait_time = 5
+repeat_actions = 600
 max_actions = 1
 max_likes = 2
 
