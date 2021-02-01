@@ -7,13 +7,17 @@ my_bot = TwitterBot()
 start_time = time.time()
 
 #Lists
-followSourceList = ["11hr11min","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","engadget",
-                     "verge","thenextweb","digitaltrends","roadshow","themotleyfool","hypebeast","DIYDrones","BritishGQ",
-                     "LouboutinWorld","univercurious","kicksonfire"]
-reTweetSourceList = ["11hr11min","mashable","wired","cnet","EducationalPic","EmojiMashupPlus","Lifehacker","engadget",
-                     "verge","thenextweb","digitaltrends","roadshow","themotleyfool","hypebeast","DIYDrones","BritishGQ",
-                     "LouboutinWorld","univercurious","kicksonfire","omglifehacks"]
-likeSourceList = ["luxury","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","11hr11min","luxurywatches","kotaku",
+followSourceList = ["11hr11min","mashable","wired","cnet","EmojiMashupPlus","marieforleo","drsanjaygupta","naval","birbigs","Lifehacker","DalaiLama",
+                    "chrissyteigen","engadget","verge","thenextweb","HamillHimself","CES","patbits","NatGeoPhotos","oprah","TheScienceGuy","TheTweetOfGod",
+                    "ThinkGeek","factretriever","DrOz","digitaltrends","roadshow","themotleyfool","hypebeast","CIA","MarsCuriosity","BoredElonMusk",
+                    "DIYDrones","BritishGQ","LouboutinWorld","Brilliant_Ads","NASA","funnyordie","neiltyson","buzzfeed","nickbilton","KindaFunnyVids",
+                    "BabyAnimal","mental_floss","Preschoolgems","TheOnion","FacesPics","univercurious","kicksonfire"]
+reTweetSourceList = ["11hr11min","mashable","wired","cnet","EmojiMashupPlus","marieforleo","drsanjaygupta","naval","birbigs","Lifehacker","DalaiLama",
+                    "chrissyteigen","engadget","verge","thenextweb","HamillHimself","CES","patbits","NatGeoPhotos","oprah","TheScienceGuy","TheTweetOfGod",
+                    "ThinkGeek","factretriever","DrOz","digitaltrends","roadshow","themotleyfool","hypebeast","CIA","MarsCuriosity","BoredElonMusk",
+                    "DIYDrones","BritishGQ","LouboutinWorld","Brilliant_Ads","NASA","funnyordie","neiltyson","buzzfeed","nickbilton","KindaFunnyVids",
+                    "BabyAnimal","mental_floss","Preschoolgems","TheOnion","FacesPics","univercurious","kicksonfire"]
+likeSourceList = ["luxury","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","11hr11min","luxurywatches","kotaku","funny","moms","dating",
                   "lamborghini","delorean","luxuryvacation","drone","wine","whiskey","pool","jewelry","home decor","restoration hardware"]
 
 #greetingList = ["Hey", "Hi", "Hello"]
