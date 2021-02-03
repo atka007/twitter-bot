@@ -10,7 +10,7 @@ start_time = time.time()
 followSourceList = ["11hr11min","mashable","wired","cnet","EmojiMashupPlus","marieforleo","drsanjaygupta","naval","birbigs","Lifehacker","DalaiLama",
                     "chrissyteigen","engadget","verge","thenextweb","HamillHimself","CES","patbits","NatGeoPhotos","oprah","TheScienceGuy","TheTweetOfGod",
                     "ThinkGeek","factretriever","DrOz","digitaltrends","roadshow","themotleyfool","hypebeast","CIA","MarsCuriosity","BoredElonMusk",
-                    "DIYDrones","BritishGQ","LouboutinWorld","Brilliant_Ads","NASA","funnyordie","neiltyson","buzzfeed","nickbilton","KindaFunnyVids",
+                    "DIYDrones","BritishGQ","LouboutinWorld","NASA","funnyordie","neiltyson","buzzfeed","nickbilton","KindaFunnyVids",
                     "BabyAnimal","mental_floss","Preschoolgems","TheOnion","FacesPics","univercurious","kicksonfire"]
 reTweetSourceList = ["11hr11min","mashable","wired","cnet","EmojiMashupPlus","marieforleo","drsanjaygupta","naval","birbigs","Lifehacker","DalaiLama",
                     "chrissyteigen","engadget","verge","thenextweb","HamillHimself","CES","patbits","NatGeoPhotos","oprah","TheScienceGuy","TheTweetOfGod",
