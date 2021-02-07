@@ -35,7 +35,7 @@ messageList = ["Yes, gifting is a form of love language. During this hard times,
 wait_time = 5
 repeat_actions = 600
 max_actions = 1
-max_likes = 2
+max_likes = 3
 
 #Counters
 numFollowed = 0
