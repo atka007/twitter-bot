@@ -31,7 +31,7 @@ messageList = ["Yes, gifting is a form of love language. During this hard times,
                "Father's day is coming soon!!! Get your dad, partner, husband, brother and uncles the best, craziest and most affordable gift from @feed_gift!",
                "Can't give hugs and kisses via Zoom?! Check out @feed_gift for variety of gift items you can give to your loved ones."]
 
-media_folder = "c:\Users\hp_mini\Desktop\Twitter_Bot\GF_Media\"
+media_folder = "c:\\Users\\hp_mini\\Desktop\\Twitter_Bot\\GF_Media\\"
 
 #Timers
 wait_time = 5
