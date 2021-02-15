@@ -30,7 +30,7 @@ messageList = ["Yes, gifting is a form of love language. During this hard times,
                "Father's day is coming soon!!! Get your dad, partner, husband, brother and uncles the best, craziest and most affordable gift from @feed_gift!",
                "Can't give hugs and kisses via Zoom?! Check out @feed_gift for variety of gift items you can give to your loved ones."]
 
-
+media_folder = "c:/Users/hp_mini/Desktop/Twitter Bot/GF_Media/"
 #Timers
 wait_time = 5
 repeat_actions = 600
@@ -43,13 +43,17 @@ numUnfollowed = 0
 numLiked = 0
 numTweeted = 0
 numMessaged = 0
+numMedia = 0
 
 #Controls
-cntrl_follow = 1
-cntrl_unfollow = 1
-cntrl_retweet = 1
-cntrl_like = 1
+cntrl_media = 1
+cntrl_follow = 0
+cntrl_unfollow = 0
+cntrl_retweet = 0
+cntrl_like = 0
+
 cntrl_message = 0
+
 
 daily_actions = repeat_actions * wait_time
 print("Daily Actions: " + str(daily_actions))
@@ -60,6 +64,23 @@ print("Running Bot!")
 #Sync follows every day
 my_bot.sync_follows()
 
+def get_random_image_from_folder():
+  images = os.listdir(media_folder)
+  image_path = images[random.randint(0, len(images) - 1)]
+  print(image_path)
+  #full_image_path = f"{config.CONFIG['images_backlog_folder']}/{image_path}"
+  #os.rename(f"{config.CONFIG['images_base_folder']}/{image_path}", full_image_path)
+  #return open(full_image_path, "rb")
+
+#Tweet Media
+def tweet_with_media()
+  if cntrl_media == 1:            
+    with get_random_image_from_folder() as image:
+      print("Trying to post image: " + image.name)
+      #my_bot.UploadMediaChunked(image)      
+      #my_bot.PostUpdate(text="#nice", media=image)
+      #print("Posted image: " + image.name)
+  
 #Follow
 def do_follow():
   if cntrl_follow == 1:
@@ -133,7 +154,7 @@ def do_message():
     
 #Run the Loop
 for x in range(repeat_actions):
-  option = random.randint(0, 3)
+  option = random.randint(0, 1)
   elapsed_time = time.time() - start_time
   
   print("Action Number: ******************  " + str(x) + "  ******************  ")
@@ -145,10 +166,10 @@ for x in range(repeat_actions):
   #do_message()
   
   if option == 0:
-    print("Follow Action!")
-    do_follow()
-    numFollowed += 1
-
+    print("Media Post Action!") 
+    tweet_with_media()
+    numMedia += 1
+    
   elif option == 1:
     print("Unfollow Action!")
     do_unfollow()
@@ -163,6 +184,11 @@ for x in range(repeat_actions):
     print("Like Action!") 
     do_like()
     numLiked += 1
+    
+  elif option == 4:
+    print("Follow Action!")
+    do_follow()
+    numFollowed += 1
 
   else:
     print("Message Action!") 
