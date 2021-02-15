@@ -74,7 +74,7 @@ def get_random_image_from_folder():
   #return open(full_image_path, "rb")
 
 #Tweet Media
-def tweet_with_media()
+def tweet_with_media():
   if cntrl_media == 1:            
     with get_random_image_from_folder() as image:
       print("Trying to post image: " + image.name)
