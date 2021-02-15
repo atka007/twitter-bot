@@ -31,6 +31,7 @@ messageList = ["Yes, gifting is a form of love language. During this hard times,
                "Can't give hugs and kisses via Zoom?! Check out @feed_gift for variety of gift items you can give to your loved ones."]
 
 media_folder = "c:/Users/hp_mini/Desktop/Twitter Bot/GF_Media/"
+
 #Timers
 wait_time = 5
 repeat_actions = 600
