@@ -48,11 +48,11 @@ numMessaged = 0
 numMedia = 0
 
 #Controls
-cntrl_media = 1
-cntrl_follow = 0
-cntrl_unfollow = 0
-cntrl_retweet = 0
-cntrl_like = 0
+cntrl_media = 0
+cntrl_follow = 1
+cntrl_unfollow = 1
+cntrl_retweet = 1
+cntrl_like = 1
 
 cntrl_message = 0
 
