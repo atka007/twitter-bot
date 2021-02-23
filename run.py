@@ -98,8 +98,11 @@ def do_follow():
 #Unfolow
 def do_unfollow():
   if cntrl_unfollow == 1:
-    rnd=random.randint(1,max_actions) 
-    my_bot.auto_unfollow_all_followers(rnd)
+    try:
+      rnd=random.randint(1,max_actions) 
+      my_bot.auto_unfollow_all_followers(rnd)
+    except:
+      print("This didn't work for some reason!") 
     
 #Retweet
 def do_retweet():
