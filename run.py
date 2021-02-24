@@ -159,7 +159,7 @@ def do_message():
     
 #Run the Loop
 for x in range(repeat_actions):
-  option = random.randint(0, 1)
+  option = random.randint(0, 4)
   elapsed_time = time.time() - start_time
   
   print("Action Number: ******************  " + str(x) + "  ******************  ")
