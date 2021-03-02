@@ -86,14 +86,17 @@ def tweet_with_media():
 #Follow
 def do_follow():
   if cntrl_follow == 1:
-    rnd=random.randint(1,max_actions) 
-    
-    rndFollow=random.randint(0,len(followSourceList)-1)
-    #print("rndFollow: " + str(rndFollow))
-    followSource=followSourceList[rndFollow]
-    print("Follow Source: " + str(followSource))   
-        
-    my_bot.auto_follow_followers_of_user(followSource, count=rnd)     
+    try:      
+      rnd=random.randint(1,max_actions) 
+
+      rndFollow=random.randint(0,len(followSourceList)-1)
+      #print("rndFollow: " + str(rndFollow))
+      followSource=followSourceList[rndFollow]
+      print("Follow Source: " + str(followSource))   
+
+      my_bot.auto_follow_followers_of_user(followSource, count=rnd)  
+    except:
+      print("This didn't work for some reason!")
         
 #Unfolow
 def do_unfollow():
