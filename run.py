@@ -34,10 +34,10 @@ messageList = ["Yes, gifting is a form of love language. During this hard times,
 media_folder = "c:\\Users\\hp_mini\\Desktop\\Twitter_Bot\\GF_Media\\"
 
 #Timers
-wait_time = 5
-repeat_actions = 600
-max_actions = 1
-max_likes = 3
+wait_time = 4
+repeat_actions = 800
+max_actions = 2
+max_likes = 4
 
 #Counters
 numFollowed = 0
