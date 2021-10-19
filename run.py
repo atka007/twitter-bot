@@ -8,17 +8,17 @@ my_bot = TwitterBot()
 start_time = time.time()
 
 #Lists
-followSourceList = ["11hr11min","mashable","wired","cnet","EmojiMashupPlus","marieforleo","drsanjaygupta","naval","birbigs","Lifehacker","DalaiLama",
+followSourceList = ["11hr11min","mashable","JRNYcrypto","wired","opensea","cnet","EmojiMashupPlus","DropYourNFT","marieforleo","drsanjaygupta","naval","birbigs","Lifehacker","DalaiLama",
                     "chrissyteigen","engadget","verge","thenextweb","HamillHimself","CES","patbits","NatGeoPhotos","oprah","TheScienceGuy","TheTweetOfGod",
                     "ThinkGeek","factretriever","DrOz","digitaltrends","roadshow","themotleyfool","hypebeast","CIA","MarsCuriosity","BoredElonMusk",
                     "DIYDrones","BritishGQ","LouboutinWorld","NASA","funnyordie","neiltyson","buzzfeed","nickbilton","KindaFunnyVids",
                     "BabyAnimal","mental_floss","Preschoolgems","TheOnion","FacesPics","univercurious","kicksonfire"]
-reTweetSourceList = ["11hr11min","mashable","wired","cnet","EmojiMashupPlus","marieforleo","drsanjaygupta","naval","birbigs","Lifehacker","DalaiLama",
+reTweetSourceList = ["11hr11min","mashable","DropYourNFT","wired","cnet","CoinMarketCap","EmojiMashupPlus","marieforleo","drsanjaygupta","naval","birbigs","Lifehacker","DalaiLama",
                     "chrissyteigen","engadget","verge","thenextweb","HamillHimself","CES","patbits","NatGeoPhotos","oprah","TheScienceGuy","TheTweetOfGod",
-                    "ThinkGeek","factretriever","DrOz","digitaltrends","roadshow","themotleyfool","hypebeast","CIA","MarsCuriosity","BoredElonMusk",
+                    "ThinkGeek","factretriever","DrOz","JRNYcrypto","opensea","digitaltrends","roadshow","themotleyfool","hypebeast","CIA","MarsCuriosity","BoredElonMusk",
                     "DIYDrones","BritishGQ","LouboutinWorld","Brilliant_Ads","NASA","funnyordie","neiltyson","buzzfeed","nickbilton","KindaFunnyVids",
                     "BabyAnimal","mental_floss","Preschoolgems","TheOnion","FacesPics","univercurious","kicksonfire"]
-likeSourceList = ["luxury","mashable","wired","cnet","EmojiMashupPlus","Lifehacker","11hr11min","luxurywatches","kotaku","funny","moms","dating",
+likeSourceList = ["luxury","mashable","wired","cnet","EmojiMashupPlus","nft","Lifehacker","11hr11min","luxurywatches","kotaku","funny","moms","dating",
                   "lamborghini","delorean","luxuryvacation","drone","wine","whiskey","pool","jewelry","home decor","restoration hardware"]
 
 #greetingList = ["Hey", "Hi", "Hello"]
